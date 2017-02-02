@@ -253,7 +253,11 @@
     if([self isForbiddenResponse:responseStatus.statusCode])
     {
         realAPIBlock = block;
-        [self renewLogin];
+        if([UserDefaults boolForKey:kIsUserLoggedIn]){
+            [[UserManager sharedManager] logoutUser];
+        }
+        block(NO, [NSMutableDictionary dictionaryWithObject:@"Your session expire. Please login again." forKey:@"message"]);
+        //[self renewLogin];
         return;
     }
     
@@ -327,8 +331,9 @@
     VMRequest = request;
     VMRequest.requestType = requestType;
     NSMutableDictionary *dictionary = [[request getParams] mutableCopy];
-    if([request.urlPath isEqualToString:kLoginAPI]){
+    if([request.urlPath isEqualToString:kLoginAPI] || [request.urlPath isEqualToString:kSignUpAPI]){
         [dictionary setValue:@"**********" forKey:@"password"];
+        [dictionary setValue:@"**********" forKey:@"password_confirmation"];
     }
     NSString *message = [NSString stringWithFormat:@"Info: Performing API call [Request:%@] with [URL:%@] [params: %@]", [request class], request.urlPath, dictionary];
     NSLog(message);

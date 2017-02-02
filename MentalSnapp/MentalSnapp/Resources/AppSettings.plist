@@ -5,7 +5,7 @@
 	<key>NetworkMode</key>
 	<string>STAGING</string>
 	<key>LocalURL</key>
-	<string>192.168.1.38:3000</string>
+	<string>192.168.1.38:3001</string>
 	<key>ProductionURL</key>
 	<string>api.mentalsnapp.com</string>
 	<key>StagingURL</key>

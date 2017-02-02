@@ -52,6 +52,7 @@
     // Do any additional setup after loading the view.
     _selectedIndexPath = 1;
     self.selectedViewTag = 1;
+       
     [self setNavigationBarButtonTitle:@"Mental Snapp"];
       [self showInProgress:YES];
     [self getGuidedExcercise];
@@ -465,7 +466,7 @@
                 });
             }
         }
-        else if (scrollView.contentOffset.x < self.lastContentOffset) {
+        else if (scrollView.contentOffset.x < self.lastContentOffset && (_selectedIndexPath<self.guideExcerciseViewControllers.count)) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self showPreSelectedExcerciseForIndexpath:[NSIndexPath indexPathForRow:_selectedIndexPath+1 inSection:0] AndUnselectedIndexPath:[NSIndexPath indexPathForRow:self.selectedViewTag inSection:0] withAnimation:YES andGrowValue:0 andShrinkValue:0];
                 self.selectedViewTag = _selectedViewTag;

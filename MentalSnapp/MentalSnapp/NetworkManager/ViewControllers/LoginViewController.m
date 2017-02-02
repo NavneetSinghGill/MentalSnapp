@@ -6,6 +6,7 @@
 #import "LoginViewController.h"
 #import "RequestManager.h"
 #import "WelcomeBackViewController.h"
+#import <Crittercism/Crittercism.h>
 
 @interface LoginViewController() <UITextFieldDelegate> {
     NSInteger kLogoTopConstraintDefaultValue;
@@ -81,7 +82,7 @@
                 [UserDefaults setValue:self.passwordTextField.text forKey:kUserPassword];
                 [UserDefaults setBool:YES forKey:kIsUserLoggedIn];
                 [UserDefaults synchronize];
-    
+                [Crittercism setUsername:self.userEmailTextField.text];
                 if ([UserManager sharedManager].isFirstTime) {
                     [UIView transitionWithView:ApplicationDelegate.window
                                       duration:0.5f
