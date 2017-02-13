@@ -139,15 +139,15 @@
     
     NSMutableArray *weekArray = [[NSMutableArray alloc] init];
     for (int i=1; i<=[Util weeksOfMonth:12 inYear:2016]; i++) {
-        NSString *startDate = [Util startDateofWeek:i inMonth:month inYear:year withFormate:@"dd/MM"];
-        NSString *endDate = [Util endDateofWeek:i inMonth:month inYear:year withFormate:@"dd/MM"];
+        NSString *startDate = [Util startDateofWeek:i inMonth:month inYear:year withFormate:@"MM/dd"];
+        NSString *endDate = [Util endDateofWeek:i inMonth:month inYear:year withFormate:@"MM/dd"];
         
         if(i==1){
-            startDate = [NSDate stringFromDate:date1 format:@"dd/MM"];
+            startDate = [NSDate stringFromDate:date1 format:@"MM/dd"];
         }
         
         if(i==[Util weeksOfMonth:12 inYear:2016]){
-            endDate = [NSDate stringFromDate:date2 format:@"dd/MM"];
+            endDate = [NSDate stringFromDate:date2 format:@"MM/dd"];
         }
 
         NSString* string = [NSString stringWithFormat:@"%@ - %@",startDate,endDate];

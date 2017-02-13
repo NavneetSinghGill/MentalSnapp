@@ -174,7 +174,34 @@ static const CGFloat lineChartCellHeight = 240.0;
         }
     }];
     
-    NSString* string = [NSString stringWithFormat:@"I was %@ in week (%@ - %@)",[Util getMoodString:maxValuedMoodId],[Util startDateofWeek:selectedWeek+1 inMonth:[self.stats.selectedDate month] inYear:[self.stats.selectedDate year] withFormate:@"dd/MM"],[Util endDateofWeek:selectedWeek+1 inMonth:[self.stats.selectedDate month] inYear:[self.stats.selectedDate year] withFormate:@"dd/MM"]];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MM/dd"];
+
+    NSString *startDateOfFirstWeek = [Util startDateofWeek:selectedWeek+1 inMonth:[self.stats.selectedDate month] inYear:[self.stats.selectedDate year] withFormate:@"MM/dd"];
+    NSString *endDateOfLastWeek = [Util endDateofWeek:selectedWeek+1 inMonth:[self.stats.selectedDate month] inYear:[self.stats.selectedDate year] withFormate:@"MM/dd"];
+    
+    NSDate *date1 = [formatter dateFromString:startDateOfFirstWeek];
+    NSDate *date2 = [formatter dateFromString:endDateOfLastWeek];
+    
+    if([date1 month]<[self.stats.selectedDate month]){
+        date1 = [NSDate dateFromString:[NSString stringWithFormat:@"01-%ld-%ld",(long)[self.stats.selectedDate month],(long)[self.stats.selectedDate year]] format:@"dd-MM-yyyy"];
+    }
+    if([date2 month]>[self.stats.selectedDate month]){
+        NSCalendar * calendar = [NSCalendar currentCalendar];
+        NSDate * plusOneMonthDate = [date2 dateByAddingMonths: 0];
+        NSDateComponents * plusOneMonthDateComponents = [calendar components:NSCalendarUnitMonth fromDate: plusOneMonthDate];
+        NSDate * endOfMonth = [[calendar dateFromComponents: plusOneMonthDateComponents] dateByAddingTimeInterval: -1]; // One second before the start of next month
+        if(endOfMonth.year != [self.stats.selectedDate year]){
+            date2 = [NSDate dateWithYear:[self.stats.selectedDate year] month:[self.stats.selectedDate month] day:endOfMonth.day];
+        } else {
+            date2 = [NSDate dateFromString:[endOfMonth stringInISO8601Format] format:@"dd-MM-yyyy"];
+        }
+    }
+    
+    [formatter setDateFormat:@"MM/dd"];
+
+    NSString* string = [NSString stringWithFormat:@"I was %@ in week (%@ - %@)",[Util getMoodString:maxValuedMoodId],[formatter stringFromDate:date1],[formatter stringFromDate:date2]];
     [lineChartController.weekTitleLabel setText:string];
     [lineChartController.previouseButton addTarget:self action:@selector(previouseButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     [lineChartController.nextButton addTarget:self action:@selector(nextButtonAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -366,7 +393,34 @@ static const CGFloat lineChartCellHeight = 240.0;
         }
     }];
     
-    NSString* string = [NSString stringWithFormat:@"I was %@ in week (%@ - %@)",[Util getMoodString:maxValuedMoodId],[Util startDateofWeek:section inMonth:[self.stats.selectedDate month] inYear:[self.stats.selectedDate year] withFormate:@"dd/MM"],[Util endDateofWeek:maxValuedMoodId inMonth:[self.stats.selectedDate month] inYear:[self.stats.selectedDate year] withFormate:@"dd/MM"]];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MM/dd"];
+
+    NSString *startDateOfFirstWeek = [Util startDateofWeek:selectedWeek+1 inMonth:[self.stats.selectedDate month] inYear:[self.stats.selectedDate year] withFormate:@"MM/dd"];
+    NSString *endDateOfLastWeek = [Util endDateofWeek:selectedWeek+1 inMonth:[self.stats.selectedDate month] inYear:[self.stats.selectedDate year] withFormate:@"MM/dd"];
+    
+    NSDate *date1 = [formatter dateFromString:startDateOfFirstWeek];
+    NSDate *date2 = [formatter dateFromString:endDateOfLastWeek];
+    
+    if([date1 month]<[self.stats.selectedDate month]){
+        date1 = [NSDate dateFromString:[NSString stringWithFormat:@"01-%ld-%ld",(long)[self.stats.selectedDate month],(long)[self.stats.selectedDate year]] format:@"dd-MM-yyyy"];
+    }
+    if([date2 month]>[self.stats.selectedDate month]){
+        NSCalendar * calendar = [NSCalendar currentCalendar];
+        NSDate * plusOneMonthDate = [date2 dateByAddingMonths: 0];
+        NSDateComponents * plusOneMonthDateComponents = [calendar components:NSCalendarUnitMonth fromDate: plusOneMonthDate];
+        NSDate * endOfMonth = [[calendar dateFromComponents: plusOneMonthDateComponents] dateByAddingTimeInterval: -1]; // One second before the start of next month
+        if(endOfMonth.year != [self.stats.selectedDate year]){
+            date2 = [NSDate dateWithYear:[self.stats.selectedDate year] month:[self.stats.selectedDate month] day:endOfMonth.day];
+        } else {
+            date2 = [NSDate dateFromString:[endOfMonth stringInISO8601Format] format:@"dd-MM-yyyy"];
+        }
+    }
+    
+    [formatter setDateFormat:@"MM/dd"];
+    
+    NSString* string = [NSString stringWithFormat:@"I was %@ in week (%@ - %@)",[Util getMoodString:maxValuedMoodId],[formatter stringFromDate:date1],[formatter stringFromDate:date2]];
+    
     [lineChartController.weekTitleLabel setText:string];
     if(selectedWeek != 0){
         NSArray *arrayNextMoods = [[self.stats weekDataInfo] objectAtIndex:selectedWeek+1];
