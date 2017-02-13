@@ -427,6 +427,12 @@ static const CGFloat lineChartCellHeight = 240.0;
         isNextButtonHidden = ([arrayNextMoods count]>0)?NO:YES;
         NSArray *arrayPreMoods = [[self.stats weekDataInfo] objectAtIndex:selectedWeek-1];
         isPreviouseButtonHidden = ([arrayPreMoods count]>0)?NO:YES;
+    } else {
+        isPreviouseButtonHidden = YES;
+        if([self.stats weekDataInfo].count>0 && [self.stats weekDataInfo].count>selectedWeek+1){
+            NSArray *arrayNextMoods = [[self.stats weekDataInfo] objectAtIndex:selectedWeek+1];
+            isNextButtonHidden = ([arrayNextMoods count]>0)?NO:YES;
+        }
     }
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationNone];
 
