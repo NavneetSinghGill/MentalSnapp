@@ -182,6 +182,10 @@
 		EF86F2851E137BCD009D2D49 /* MoodDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EF86F2841E137BCD009D2D49 /* MoodDataModel.m */; };
 		EF88E2821E03BFBB00858A8D /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF88E2811E03BFBB00858A8D /* PlayerViewController.m */; };
 		EF88E2841E03C13700858A8D /* PlayerStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF88E2831E03C13700858A8D /* PlayerStoryboard.storyboard */; };
+		EFC264301E5FECBC002742CB /* TutorialStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC2642F1E5FECBC002742CB /* TutorialStoryboard.storyboard */; };
+		EFC264351E5FEE9A002742CB /* TutorialPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC264341E5FEE9A002742CB /* TutorialPageViewController.m */; };
+		EFC264381E5FF20C002742CB /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC264371E5FF20C002742CB /* TutorialViewController.m */; };
+		EFC2643B1E5FF4C0002742CB /* TutorialPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC2643A1E5FF4C0002742CB /* TutorialPageModel.m */; };
 		EFDBB0F31E1676520085B586 /* SubCategoryPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDBB0F21E1676520085B586 /* SubCategoryPageViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -527,6 +531,13 @@
 		EF88E2801E03BFBB00858A8D /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
 		EF88E2811E03BFBB00858A8D /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		EF88E2831E03C13700858A8D /* PlayerStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlayerStoryboard.storyboard; sourceTree = "<group>"; };
+		EFC2642F1E5FECBC002742CB /* TutorialStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TutorialStoryboard.storyboard; sourceTree = "<group>"; };
+		EFC264331E5FEE9A002742CB /* TutorialPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialPageViewController.h; sourceTree = "<group>"; };
+		EFC264341E5FEE9A002742CB /* TutorialPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialPageViewController.m; sourceTree = "<group>"; };
+		EFC264361E5FF20C002742CB /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
+		EFC264371E5FF20C002742CB /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
+		EFC264391E5FF4C0002742CB /* TutorialPageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialPageModel.h; sourceTree = "<group>"; };
+		EFC2643A1E5FF4C0002742CB /* TutorialPageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialPageModel.m; sourceTree = "<group>"; };
 		EFDBB0F11E1676520085B586 /* SubCategoryPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubCategoryPageViewController.h; sourceTree = "<group>"; };
 		EFDBB0F21E1676520085B586 /* SubCategoryPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubCategoryPageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1148,6 +1159,7 @@
 		6AAA01281DE56F8600208022 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				EFC264321E5FEE37002742CB /* TutorialsScreen */,
 				6A704D581E13913700830031 /* LineStatsViewController */,
 				EF88E27E1E03BF9600858A8D /* PlayerView */,
 				6A4AE65B1E02A187005DF1DA /* DownloadVideoView */,
@@ -1198,6 +1210,7 @@
 				6AAA01321DE56F8600208022 /* Main.storyboard */,
 				6A98B1281DE5A3F4009F1412 /* ProfileStoryboard.storyboard */,
 				EF88E2831E03C13700858A8D /* PlayerStoryboard.storyboard */,
+				EFC2642F1E5FECBC002742CB /* TutorialStoryboard.storyboard */,
 			);
 			path = StoryboardAndXIBs;
 			sourceTree = "<group>";
@@ -1225,6 +1238,8 @@
 				EF86F2801E12A4BE009D2D49 /* StatsModel.m */,
 				EF86F2831E137BCD009D2D49 /* MoodDataModel.h */,
 				EF86F2841E137BCD009D2D49 /* MoodDataModel.m */,
+				EFC264391E5FF4C0002742CB /* TutorialPageModel.h */,
+				EFC2643A1E5FF4C0002742CB /* TutorialPageModel.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -1433,6 +1448,17 @@
 			path = PlayerView;
 			sourceTree = "<group>";
 		};
+		EFC264321E5FEE37002742CB /* TutorialsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				EFC264331E5FEE9A002742CB /* TutorialPageViewController.h */,
+				EFC264341E5FEE9A002742CB /* TutorialPageViewController.m */,
+				EFC264361E5FF20C002742CB /* TutorialViewController.h */,
+				EFC264371E5FF20C002742CB /* TutorialViewController.m */,
+			);
+			path = TutorialsScreen;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1574,6 +1600,7 @@
 				6A7D95F11DE6FA050065573E /* Roboto-BlackItalic.ttf in Resources */,
 				6A7D95F61DE6FA050065573E /* Roboto-LightItalic.ttf in Resources */,
 				6A7D95FB1DE6FA050065573E /* Roboto-ThinItalic.ttf in Resources */,
+				EFC264301E5FECBC002742CB /* TutorialStoryboard.storyboard in Resources */,
 				6A7D95FA1DE6FA050065573E /* Roboto-Thin.ttf in Resources */,
 				6AC660E61DE5740B00BB8949 /* .gitignore in Resources */,
 				6AEBC5E91E1E320E00B90BC9 /* MentalSnappPrivacy.rtf in Resources */,
@@ -1689,6 +1716,7 @@
 				5C7BE3E21DE886D600C15CB5 /* StatsViewController.m in Sources */,
 				6AAA014F1DE56F8600208022 /* UIView+LayerOperation.m in Sources */,
 				EF4F3B421DF9743200CE20FC /* S3Manager.m in Sources */,
+				EFC264351E5FEE9A002742CB /* TutorialPageViewController.m in Sources */,
 				6A7387E21DF1734200D3A981 /* SubCategoryTableViewCell.m in Sources */,
 				6A704D7F1E13923E00830031 /* FPTuple.m in Sources */,
 				6AAA01601DE56F8600208022 /* Request.m in Sources */,
@@ -1716,6 +1744,7 @@
 				EF6DA2521DFFCC4300607C7B /* VideosViewController.m in Sources */,
 				5C7BE3E51DE8877400C15CB5 /* QueuedExercisesViewController.m in Sources */,
 				6A288EC51DED8BB100273CCC /* CommentsPaginate.m in Sources */,
+				EFC2643B1E5FF4C0002742CB /* TutorialPageModel.m in Sources */,
 				6A5BBBAE1DFAECA100C67CE9 /* FeelingListViewController.m in Sources */,
 				6AAA014E1DE56F8600208022 /* UIView+Badge.m in Sources */,
 				EF86F27E1E129E8B009D2D49 /* StatsInterface.m in Sources */,
@@ -1752,6 +1781,7 @@
 				6AAA013E1DE56F8600208022 /* AppDelegate.m in Sources */,
 				6A704D851E13923E00830031 /* NSURL+ParameterParsing.m in Sources */,
 				EF49E86A1E027AFA00B5AFF7 /* FPPopoverView.m in Sources */,
+				EFC264381E5FF20C002742CB /* TutorialViewController.m in Sources */,
 				6AAA01441DE56F8600208022 /* NSString+Properties.m in Sources */,
 				6AC660EC1DE5740B00BB8949 /* SMobiLogger.xcdatamodeld in Sources */,
 				5C8A3A291DE5D5B800706925 /* UserModel.m in Sources */,

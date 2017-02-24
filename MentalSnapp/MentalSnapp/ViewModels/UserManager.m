@@ -5,6 +5,7 @@
 
 #import "UserManager.h"
 #import "LoginViewController.h"
+#import "TutorialPageViewController.h"
 
 @implementation UserManager
 
@@ -71,8 +72,20 @@ static dispatch_once_t userOnceToken;
 -(void)logoutUser {
     [self removeUserFromUserDefault];
     [[ScheduleManager sharedInstance] didcleanSchedules];
+    [self showLoginViewController];
+}
+
+- (void)showLoginViewController
+{
     LoginViewController *loginViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"LoginViewController"];
     [[ApplicationDelegate window] setRootViewController:[[UINavigationController alloc] initWithRootViewController:loginViewController]];
+}
+
+- (void)showTutorialScreen:(BOOL)isFirstTutorial
+{
+    TutorialPageViewController *tutorialPageViewController = [[UIStoryboard storyboardWithName:kTutorialStoryboard bundle:nil] instantiateViewControllerWithIdentifier:kTutorialPageViewControllerIdentifier];
+    tutorialPageViewController.isFirstTutorial = isFirstTutorial;
+    [[ApplicationDelegate window] setRootViewController:[[UINavigationController alloc] initWithRootViewController:tutorialPageViewController]];
 }
 
 //*>    Save Logged in user's info in user default

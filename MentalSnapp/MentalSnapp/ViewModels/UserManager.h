@@ -21,6 +21,8 @@
 - (void)setValueInLoggedInUserObjectFromUserDefault;
 - (void)updateProfileURL:(NSString *)profileURL;
 - (void)removeUserFromUserDefault;
+- (void)showLoginViewController;
+- (void)showTutorialScreen:(BOOL)isFirstTutorial;
 
 + (BOOL)isValidEmail:(NSString *)checkString;
 - (void)logoutUser;

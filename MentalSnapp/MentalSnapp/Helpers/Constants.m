@@ -55,14 +55,18 @@ ns *kUserEmail = @"UserEmail";
 ns *kUserPassword = @"UserPassword";
 ns *kRememberMe = @"RememberMe";
 ns *kIsUserLoggedIn = @"IsUserLoggedIn";
+ns *kIsTutorialShownBefore = @"IsTutorialShownBefore";
 ns *kIsCameraDurationAlertShown = @"IsCameraDurationAlertShown";
 
 #pragma mark - StoryBboard
 ns *KProfileStoryboard = @"ProfileStoryboard";
 ns *KPlayerStoryboard = @"PlayerStoryboard";
+ns *kTutorialStoryboard = @"TutorialStoryboard";
 
 #pragma mark - StoryBboard Identifier
 ns * KProfileViewControllerIdentifier  = @"ProfileViewController";
+ns *kTutorialPageViewControllerIdentifier = @"TutorialPageViewController";
+ns *kTutorialViewControllerIdentifier = @"TutorialViewController";
 ns * KChangePasswordViewController = @"ChangePasswordViewController";
 ns * KSupportScreenViewController  = @"SupportScreenViewController";
 ns *kGuidedExcerciseViewController = @"GuidedExcerciseViewController";

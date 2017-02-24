@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TutorialPageViewController.h"
 #import <AWSCore/AWSCore.h>
 #import <Crittercism/Crittercism.h>
 
@@ -65,6 +66,11 @@ void uncaughtExceptionHandler(NSException *exception) {
         ApplicationDelegate.window.rootViewController = self.tabBarController;
         [[ScheduleManager sharedInstance] fetchAllSchedules];
     }
+    else if (![UserDefaults boolForKey:kIsTutorialShownBefore])
+    {
+        [[UserManager sharedManager] showTutorialScreen:YES];
+    }
+    
     [Crittercism setUsername:([UserDefaults boolForKey:kIsUserLoggedIn])?[UserManager sharedManager].userModel.userName:@""];
     
     return YES;

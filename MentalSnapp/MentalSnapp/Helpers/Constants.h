@@ -108,14 +108,18 @@ exNS *kUserEmail;
 exNS *kUserPassword;
 exNS *kRememberMe;
 exNS *kIsUserLoggedIn;
+exNS *kIsTutorialShownBefore;
 exNS *kIsCameraDurationAlertShown;
 
 #pragma mark - StoryBboard
 exNS *KProfileStoryboard;
 exNS *KPlayerStoryboard;
+exNS *kTutorialStoryboard;
 
 #pragma mark - StoryBboard Identifier
 exNS *KProfileViewControllerIdentifier;
+exNS *kTutorialPageViewControllerIdentifier;
+exNS *kTutorialViewControllerIdentifier;
 
 exNS *KChangePasswordViewController;
 exNS *KSupportScreenViewController;
