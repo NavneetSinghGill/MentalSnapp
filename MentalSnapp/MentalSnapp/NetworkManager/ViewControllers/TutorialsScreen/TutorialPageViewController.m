@@ -56,7 +56,7 @@
     {
         [[UserManager sharedManager] showLoginViewController];
         
-        [UserDefaults setBool:YES forKey:kIsTutorialShownBefore];
+        [UserDefaults setBool:NO forKey:kIsTutorialShownBefore];
         [UserDefaults synchronize];
     }
 }
@@ -239,6 +239,13 @@
     {
         self.currentIndex = [self currentControllerIndex];
         self.pageIndicatorImageView.image = [self pageIndicatorImageWithIndex:self.currentIndex];
+        
+        CATransition *transition = [CATransition animation];
+        transition.duration = 1.0f;
+        transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+        transition.type = kCATransitionFade;
+        
+        [self.pageIndicatorImageView.layer addAnimation:transition forKey:nil];
         
         if(self.currentIndex == (self.maxTutorialsCount - 1))
         {

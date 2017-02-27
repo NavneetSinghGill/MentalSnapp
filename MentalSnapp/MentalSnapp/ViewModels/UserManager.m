@@ -78,14 +78,28 @@ static dispatch_once_t userOnceToken;
 - (void)showLoginViewController
 {
     LoginViewController *loginViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"LoginViewController"];
-    [[ApplicationDelegate window] setRootViewController:[[UINavigationController alloc] initWithRootViewController:loginViewController]];
+    
+    [UIView transitionWithView:[ApplicationDelegate window]
+                      duration:0.5
+                       options:UIViewAnimationOptionTransitionFlipFromRight
+                    animations:^{
+                        [[ApplicationDelegate window] setRootViewController:[[UINavigationController alloc] initWithRootViewController:loginViewController]];
+                    }
+                    completion:nil];
 }
 
 - (void)showTutorialScreen:(BOOL)isFirstTutorial
 {
     TutorialPageViewController *tutorialPageViewController = [[UIStoryboard storyboardWithName:kTutorialStoryboard bundle:nil] instantiateViewControllerWithIdentifier:kTutorialPageViewControllerIdentifier];
     tutorialPageViewController.isFirstTutorial = isFirstTutorial;
-    [[ApplicationDelegate window] setRootViewController:[[UINavigationController alloc] initWithRootViewController:tutorialPageViewController]];
+    
+    [UIView transitionWithView:[ApplicationDelegate window]
+                      duration:0.5
+                       options:UIViewAnimationOptionTransitionFlipFromRight
+                    animations:^{
+                        [[ApplicationDelegate window] setRootViewController:[[UINavigationController alloc] initWithRootViewController:tutorialPageViewController]];
+                    }
+                    completion:nil];
 }
 
 //*>    Save Logged in user's info in user default
