@@ -197,7 +197,7 @@
                                      [UIImage imageNamed:@"page2_5"],
                                      [UIImage imageNamed:@"page2_6"]];
         
-        self.mainImages = @[[UIImage imageNamed:@"tutorial_last"]];
+        self.mainImages = @[[UIImage imageNamed:@"tutorial_11"]];
     }
     
 }

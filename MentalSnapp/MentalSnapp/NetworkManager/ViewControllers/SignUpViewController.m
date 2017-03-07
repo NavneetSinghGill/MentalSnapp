@@ -5,8 +5,9 @@
 
 #import "SignUpViewController.h"
 #import "RequestManager.h"
+#import <MessageUI/MessageUI.h>
 
-@interface SignUpViewController () {
+@interface SignUpViewController () <MFMailComposeViewControllerDelegate> {
     NSInteger selectedGender;
     NSDate *selectedDate;
 }
@@ -273,6 +274,29 @@
 
 - (IBAction)termsAndConditionButtonTapped:(id)sender {
     [self performSegueWithIdentifier:@"ToTermsScreen" sender:self];
+}
+
+- (IBAction)feedbackButtonPressed:(id)sender
+{
+    NSDate *date = [NSDate date];
+    NSDateFormatter *dateFormater = [[NSDateFormatter alloc] init];
+    
+    [dateFormater setDateFormat:@"MM-DD-yyyy HH:mm:ss"];
+    NSString *dateString = [dateFormater stringFromDate:date];
+    
+    if ([MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController *composeViewController = [[MFMailComposeViewController alloc] initWithNibName:nil bundle:nil];
+        [composeViewController setMailComposeDelegate:self];
+        [composeViewController setToRecipients:@[@"feedback@mentalsnapp.com"]];
+        [composeViewController setSubject:[NSString stringWithFormat:@"%@: Feedback for mentalsnapp android app", dateString]];
+        [self.navigationController presentViewController:composeViewController animated:YES completion:nil];
+    }
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
+{
+    //Add an alert in case of failure
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

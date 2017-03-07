@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -533,14 +533,14 @@
                                                                     <fragment content="DATE OF BIRTH  ">
                                                                         <attributes>
                                                                             <color key="NSColor" red="0.9137254901960784" green="0.396078431372549" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            <font key="NSFont" size="12" name="Roboto-Medium"/>
+                                                                            <font key="NSFont" metaFont="cellTitle"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                     <fragment content="(optional)">
                                                                         <attributes>
                                                                             <color key="NSColor" red="0.9137254901960784" green="0.396078431372549" blue="0.22745098039215686" alpha="0.82999999999999996" colorSpace="calibratedRGB"/>
-                                                                            <font key="NSFont" size="12" name="Roboto-Medium"/>
+                                                                            <font key="NSFont" metaFont="cellTitle"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
@@ -598,14 +598,14 @@
                                                                     <fragment content="PHONE  ">
                                                                         <attributes>
                                                                             <color key="NSColor" red="0.9137254901960784" green="0.396078431372549" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            <font key="NSFont" size="12" name="Roboto-Medium"/>
+                                                                            <font key="NSFont" metaFont="cellTitle"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                     <fragment content="(optional)">
                                                                         <attributes>
                                                                             <color key="NSColor" red="0.9137254901960784" green="0.396078431372549" blue="0.22745098039215686" alpha="0.82999999999999996" colorSpace="calibratedRGB"/>
-                                                                            <font key="NSFont" size="12" name="Roboto-Medium"/>
+                                                                            <font key="NSFont" metaFont="cellTitle"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
@@ -675,14 +675,14 @@
                                                                     <fragment content="I AM  ">
                                                                         <attributes>
                                                                             <color key="NSColor" red="0.9137254901960784" green="0.396078431372549" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            <font key="NSFont" size="12" name="Roboto-Medium"/>
+                                                                            <font key="NSFont" metaFont="cellTitle"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                     <fragment content="(optional)">
                                                                         <attributes>
                                                                             <color key="NSColor" red="0.9137254901960784" green="0.396078431372549" blue="0.22745098039215686" alpha="0.82999999999999996" colorSpace="calibratedRGB"/>
-                                                                            <font key="NSFont" size="12" name="Roboto-Medium"/>
+                                                                            <font key="NSFont" metaFont="cellTitle"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                         </attributes>
                                                                     </fragment>
@@ -1038,7 +1038,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlZ-ia-QmK">
-                                <rect key="frame" x="80.666666666666686" y="383" width="253" height="39"/>
+                                <rect key="frame" x="80.666666666666686" y="373" width="253" height="39"/>
                                 <color key="backgroundColor" red="0.91372549020000005" green="0.39607843139999999" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="253" id="5FI-G7-FaP"/>
@@ -1079,6 +1079,16 @@
                                     <action selector="deleteScreenShotBuutonAction:" destination="9eY-cH-84T" eventType="touchUpInside" id="LM3-Bs-YXO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYJ-bk-TML">
+                                <rect key="frame" x="96.666666666666686" y="694" width="221" height="32"/>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                                <state key="normal" title="feedback@mentalsnapp.com">
+                                    <color key="titleColor" red="0.058823529409999999" green="0.68627450980000004" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="feedbackButtonPressed:" destination="9eY-cH-84T" eventType="touchUpInside" id="kOz-Lg-kGD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1088,6 +1098,8 @@
                             <constraint firstItem="OfR-zi-vQB" firstAttribute="top" secondItem="zVl-jr-b8K" secondAttribute="bottom" constant="5" id="8e6-Om-46r"/>
                             <constraint firstAttribute="right" secondItem="cfz-e7-M10" secondAttribute="right" constant="20" id="LFl-gF-Trq"/>
                             <constraint firstItem="hUJ-LU-Y5a" firstAttribute="leading" secondItem="9vR-1E-hGy" secondAttribute="leading" id="NeY-me-Noc"/>
+                            <constraint firstItem="FRl-Ng-cRw" firstAttribute="top" secondItem="LYJ-bk-TML" secondAttribute="bottom" constant="10" id="RkT-Vk-2TI"/>
+                            <constraint firstItem="LYJ-bk-TML" firstAttribute="centerX" secondItem="9vR-1E-hGy" secondAttribute="centerX" id="UMo-1A-Qhe"/>
                             <constraint firstItem="zVl-jr-b8K" firstAttribute="leading" secondItem="9vR-1E-hGy" secondAttribute="leadingMargin" constant="26" id="Xkv-ek-2dp"/>
                             <constraint firstItem="wBM-ga-ita" firstAttribute="left" secondItem="9vR-1E-hGy" secondAttribute="left" constant="35" id="d6o-qn-HN4"/>
                             <constraint firstItem="zlZ-ia-QmK" firstAttribute="centerX" secondItem="9vR-1E-hGy" secondAttribute="centerX" id="hDb-nH-wgr"/>
@@ -1096,7 +1108,7 @@
                             <constraint firstItem="odt-Kd-Hty" firstAttribute="top" secondItem="OfR-zi-vQB" secondAttribute="bottom" constant="10" id="m11-pp-tls"/>
                             <constraint firstItem="odt-Kd-Hty" firstAttribute="leading" secondItem="wBM-ga-ita" secondAttribute="trailing" constant="1" id="oIQ-z2-3gQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zVl-jr-b8K" secondAttribute="trailing" constant="89" id="onn-L6-YUH"/>
-                            <constraint firstItem="zlZ-ia-QmK" firstAttribute="top" secondItem="wBM-ga-ita" secondAttribute="bottom" constant="40" id="q65-Sp-9hR"/>
+                            <constraint firstItem="zlZ-ia-QmK" firstAttribute="top" secondItem="wBM-ga-ita" secondAttribute="bottom" constant="30" id="q65-Sp-9hR"/>
                             <constraint firstItem="OfR-zi-vQB" firstAttribute="leading" secondItem="9vR-1E-hGy" secondAttribute="leading" constant="33" id="qCg-fN-vXS"/>
                             <constraint firstItem="zVl-jr-b8K" firstAttribute="top" secondItem="hUJ-LU-Y5a" secondAttribute="bottom" constant="13" id="qQN-7X-G0J"/>
                         </constraints>
@@ -1112,7 +1124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e8o-T5-QAI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7076" y="-717.39130434782612"/>
+            <point key="canvasLocation" x="-7076.811594202899" y="-717.39130434782612"/>
         </scene>
         <!--Excercise Sub Category View Controller-->
         <scene sceneID="G2p-mk-00l">
@@ -2336,7 +2348,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There are no excercise questions available yet!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ee2-l1-3mU">
-                                <rect key="frame" x="40" y="329" width="334" height="40"/>
+                                <rect key="frame" x="40" y="329.33333333333326" width="334" height="39.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
                                 <color key="textColor" red="0.91372549020000005" green="0.39607843139999999" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>

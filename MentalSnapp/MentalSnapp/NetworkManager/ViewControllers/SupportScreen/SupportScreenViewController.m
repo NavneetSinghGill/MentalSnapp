@@ -9,11 +9,12 @@
 #import "GZIP.h"
 #import "UserManager.h"
 #import "RequestManager.h"
+#import <MessageUI/MessageUI.h>
 
 #define KsupportDefaultColor [UIColor colorWithRed:83.0/255.0 green:83.0/255.0 blue:83.0/255.0 alpha:1.0]
 #define KsupportPlaceHolderColor [UIColor colorWithRed:183.0/255.0 green:183.0/255.0 blue:183.0/255.0 alpha:1.0]
 
-@interface SupportScreenViewController ()
+@interface SupportScreenViewController () <MFMailComposeViewControllerDelegate>
 @property (strong, nonatomic) IBOutlet UIView *textViewContainer;
 @property (strong, nonatomic) IBOutlet UITextView *textView;
 @property (strong, nonatomic) UIImage *attachedScreenShot;
@@ -198,6 +199,29 @@ NSString *const supportTextViewPlaceholder = @"Write your text...";
     [self.deleteScreenShotButton setHidden:YES];
     [[self screenShotButton] setTitle:@"Attach screenshot" forState:UIControlStateNormal];
 
+}
+
+- (IBAction)feedbackButtonPressed:(id)sender
+{
+    NSDate *date = [NSDate date];
+    NSDateFormatter *dateFormater = [[NSDateFormatter alloc] init];
+    
+    [dateFormater setDateFormat:@"MM-DD-yyyy HH:mm:ss"];
+    NSString *dateString = [dateFormater stringFromDate:date];
+    
+    if ([MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController *composeViewController = [[MFMailComposeViewController alloc] initWithNibName:nil bundle:nil];
+        [composeViewController setMailComposeDelegate:self];
+        [composeViewController setToRecipients:@[@"feedback@mentalsnapp.com"]];
+        [composeViewController setSubject:[NSString stringWithFormat:@"%@: Feedback for mentalsnapp android app", dateString]];
+        [self.navigationController presentViewController:composeViewController animated:YES completion:nil];
+    }
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
+{
+    //Add an alert in case of failure
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
