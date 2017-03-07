@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'B35C1CBAAEA162BDEDB898D425674107'
+               BlueprintIdentifier = '6094131A2228517C327FCB1B5E634DA8'
                BlueprintName = 'Pods-MentalSnapp'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-MentalSnapp.a'>

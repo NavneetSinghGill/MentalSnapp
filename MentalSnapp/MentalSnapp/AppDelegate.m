@@ -10,6 +10,7 @@
 #import "TutorialPageViewController.h"
 #import <AWSCore/AWSCore.h>
 #import <Crittercism/Crittercism.h>
+#import <Google/Analytics.h>
 
 @interface AppDelegate ()
 @property (nonatomic) BOOL isNetworkAvailable;
@@ -36,6 +37,9 @@ void uncaughtExceptionHandler(NSException *exception) {
     
   //Add crittercism and apteligent
     [Crittercism enableWithAppID:[self appteligentAppId]];
+    
+    //Google analytics
+    id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-54478999-2"];
 
 //    if(appSettings.EnableFlurry)
 //    {

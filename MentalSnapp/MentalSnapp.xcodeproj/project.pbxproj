@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		26E53943AD4503D45E53BE0D /* libPods-MentalSnapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BE09BFE2D2D9B160A61EE5 /* libPods-MentalSnapp.a */; };
+		5C396CB61E6ED48C00AECC57 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C396CB51E6ED48C00AECC57 /* GoogleService-Info.plist */; };
+		5C396CB71E6ED48C00AECC57 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C396CB51E6ED48C00AECC57 /* GoogleService-Info.plist */; };
+		5C396CB81E6ED48C00AECC57 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C396CB51E6ED48C00AECC57 /* GoogleService-Info.plist */; };
 		5C47E8691E13CC2400DACD12 /* TermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C47E8681E13CC2400DACD12 /* TermsViewController.m */; };
 		5C5309E01DE6C865005E14A4 /* LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5309DF1DE6C865005E14A4 /* LoginRequest.m */; };
 		5C545E7C1DF02035004610B0 /* ForgotPasswordFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C545E7B1DF02035004610B0 /* ForgotPasswordFirstViewController.m */; };
@@ -216,6 +219,7 @@
 /* Begin PBXFileReference section */
 		16BE09BFE2D2D9B160A61EE5 /* libPods-MentalSnapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MentalSnapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F7537821A7A1F2617B8A585 /* Pods-MentalSnapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MentalSnapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MentalSnapp/Pods-MentalSnapp.release.xcconfig"; sourceTree = "<group>"; };
+		5C396CB51E6ED48C00AECC57 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5C47E8671E13CC2400DACD12 /* TermsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TermsViewController.h; sourceTree = "<group>"; };
 		5C47E8681E13CC2400DACD12 /* TermsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TermsViewController.m; sourceTree = "<group>"; };
 		5C5309DE1DE6C865005E14A4 /* LoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginRequest.h; sourceTree = "<group>"; };
@@ -963,6 +967,7 @@
 				6AAA00D81DE56F8500208022 /* Assets.xcassets */,
 				6AAA00D91DE56F8500208022 /* Helpers */,
 				6AAA00FE1DE56F8500208022 /* Info.plist */,
+				5C396CB51E6ED48C00AECC57 /* GoogleService-Info.plist */,
 				6AAA00FF1DE56F8500208022 /* Lib */,
 				6AAA01091DE56F8500208022 /* main.m */,
 				6AAA010A1DE56F8500208022 /* Manager */,
@@ -1587,6 +1592,7 @@
 				6A7D95F21DE6FA050065573E /* Roboto-Bold.ttf in Resources */,
 				6A7D95F91DE6FA050065573E /* Roboto-Regular.ttf in Resources */,
 				6AC660ED1DE5740B00BB8949 /* SMobiLogger.podspec in Resources */,
+				5C396CB61E6ED48C00AECC57 /* GoogleService-Info.plist in Resources */,
 				6AAA01681DE56F8600208022 /* Main.storyboard in Resources */,
 				6AAA01641DE56F8600208022 /* AppSettings.plist in Resources */,
 				6AC660E91DE5740B00BB8949 /* Lib.plist in Resources */,
@@ -1620,6 +1626,7 @@
 			files = (
 				6AC660F41DE576E500BB8949 /* MentalSnappTests.xctest in Resources */,
 				6A1D50E81DE57A170073F479 /* Info.plist in Resources */,
+				5C396CB71E6ED48C00AECC57 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1628,6 +1635,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AC660F51DE576E500BB8949 /* MentalSnappTests.xctest in Resources */,
+				5C396CB81E6ED48C00AECC57 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

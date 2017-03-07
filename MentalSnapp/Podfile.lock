@@ -19,6 +19,28 @@ PODS:
   - AWSS3 (2.4.12):
     - AWSCore (= 2.4.12)
   - DateTools (1.7.0)
+  - FirebaseAnalytics (3.6.0):
+    - FirebaseCore (~> 3.4)
+    - FirebaseInstanceID (~> 1.0)
+    - GoogleInterchangeUtilities (~> 1.2)
+    - GoogleSymbolUtilities (~> 1.1)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseCore (3.4.5):
+    - GoogleInterchangeUtilities (~> 1.2)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseInstanceID (1.0.8)
+  - Google/Analytics (3.0.3):
+    - Google/Core
+    - GoogleAnalytics (~> 3.12)
+  - Google/Core (3.0.3):
+    - FirebaseAnalytics (~> 3.2)
+  - GoogleAnalytics (3.17.0)
+  - GoogleInterchangeUtilities (1.2.2):
+    - GoogleSymbolUtilities (~> 1.1)
+  - GoogleSymbolUtilities (1.1.2)
+  - GoogleToolboxForMac/Defines (2.1.0)
+  - GoogleToolboxForMac/NSData+zlib (2.1.0):
+    - GoogleToolboxForMac/Defines (= 2.1.0)
   - JSONModel (1.7.0)
   - JTProgressHUD (1.0.5)
   - MagicalRecord (2.3.2):
@@ -35,6 +57,7 @@ DEPENDENCIES:
   - AWSCore
   - AWSS3
   - DateTools
+  - Google/Analytics
   - JSONModel
   - JTProgressHUD
   - MagicalRecord
@@ -47,12 +70,20 @@ SPEC CHECKSUMS:
   AWSCore: 8ee5b1dc06a0fd562429fe7120113ca93cbfbca6
   AWSS3: 7bb3e095a37ed8334a0b868bbca74ab574b37a4f
   DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
+  FirebaseAnalytics: 9c67af0ebeb8d2146c9b4ea2616439affa947b58
+  FirebaseCore: 1e383fdfe37b6b5d6ff88e84204bdee30276af0f
+  FirebaseInstanceID: ba1e640935235e5fac39dfa816fe7660e72e1a8a
+  Google: 813c467362eabc11385f5a5cc9ad0cb651a58f4e
+  GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
+  GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
+  GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
+  GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
   JTProgressHUD: 7eb019487a92731c8716c15f19e94690cf35f644
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
 
-PODFILE CHECKSUM: 4d4ea998f494d0869059947d608752c69cda93fa
+PODFILE CHECKSUM: 849f95e7d5d9296e28585f41a55979e30b535dfb
 
 COCOAPODS: 1.1.1

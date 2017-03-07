@@ -16,6 +16,7 @@ pod 'JTProgressHUD'
 
 pod 'AWSCore'
 pod 'AWSS3'
+pod 'Google/Analytics'
 
 end
 

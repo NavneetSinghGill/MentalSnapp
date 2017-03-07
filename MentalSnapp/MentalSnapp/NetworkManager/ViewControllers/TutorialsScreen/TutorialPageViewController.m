@@ -237,6 +237,11 @@
     childViewController.selectedTutorial = [self.tutorialPages objectAtIndex:index];
     
     childViewController.index = index;
+    [[GAI sharedInstance].defaultTracker send:
+     [[GAIDictionaryBuilder createEventWithCategory:@"Tutorial"
+                                             action:@"123"
+                                              label:@"Settings"
+                                              value:nil] build]];
     
     return childViewController;
     

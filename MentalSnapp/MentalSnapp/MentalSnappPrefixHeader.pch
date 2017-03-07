@@ -73,4 +73,7 @@
 
 #import "MainTabBarController.h"
 
+#import <Google/Analytics.h>
+#import <GAITracker.h>
+
 #endif
