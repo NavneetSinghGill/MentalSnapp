@@ -43,6 +43,18 @@
         self.titleLabel.text = self.selectedTutorial.tutorialTitle;
         self.descriptionTextView.text = self.selectedTutorial.tutorialDescription;
         
+        if (_index == 10) {
+            NSMutableAttributedString *attString = [_descriptionTextView.attributedText mutableCopy];
+            UIFont *font = [UIFont fontWithName:@"Roboto-Light" size:14.f];
+            [attString addAttribute:NSFontAttributeName value:font range:[_descriptionTextView.text rangeOfString:@"Sometimes recording a diary is boring, sometimes it’s a chore. It’s an everyday thing, part of the routine. In the poem Born Yesterday, Phillip Larkin reflects on what it is to be ordinary. The poem ends;\n\n"]];
+            _descriptionTextView.attributedText = attString;
+        } else {
+            UIFont *font = [UIFont fontWithName:@"Roboto-Light" size:14.f];
+            NSMutableAttributedString *attString = [[NSMutableAttributedString alloc]initWithString:_descriptionTextView.text];
+            [attString addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, _descriptionTextView.text.length)];
+            _descriptionTextView.attributedText = attString;
+        }
+        
         _tapToRecordButton.hidden = _tapToSignupButton.hidden = _signatureImageView.hidden = YES;
         _titleLabel.hidden = _descriptionTextView.hidden = NO;
     } else {
