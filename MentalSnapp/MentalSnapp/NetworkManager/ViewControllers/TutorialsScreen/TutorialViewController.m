@@ -16,7 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *tapToRecordButton;
 @property (weak, nonatomic) IBOutlet UIButton *tapToSignupButton;
-@property (weak, nonatomic) IBOutlet UIButton *signatureImageButton;
+@property (weak, nonatomic) IBOutlet UIImageView *signatureImageView;
 
 @end
 
@@ -43,10 +43,10 @@
         self.titleLabel.text = self.selectedTutorial.tutorialTitle;
         self.descriptionTextView.text = self.selectedTutorial.tutorialDescription;
         
-        _tapToRecordButton.hidden = _tapToSignupButton.hidden = _signatureImageButton.hidden = YES;
+        _tapToRecordButton.hidden = _tapToSignupButton.hidden = _signatureImageView.hidden = YES;
         _titleLabel.hidden = _descriptionTextView.hidden = NO;
     } else {
-        _tapToRecordButton.hidden = _tapToSignupButton.hidden = _signatureImageButton.hidden = NO;
+        _tapToRecordButton.hidden = _tapToSignupButton.hidden = _signatureImageView.hidden = NO;
         _titleLabel.hidden = _descriptionTextView.hidden = YES;
     }
 }

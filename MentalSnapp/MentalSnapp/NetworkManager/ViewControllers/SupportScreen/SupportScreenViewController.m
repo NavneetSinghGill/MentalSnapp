@@ -206,14 +206,14 @@ NSString *const supportTextViewPlaceholder = @"Write your text...";
     NSDate *date = [NSDate date];
     NSDateFormatter *dateFormater = [[NSDateFormatter alloc] init];
     
-    [dateFormater setDateFormat:@"MM-DD-yyyy HH:mm:ss"];
+    [dateFormater setDateFormat:@"MM-dd-yyyy"];
     NSString *dateString = [dateFormater stringFromDate:date];
     
     if ([MFMailComposeViewController canSendMail]) {
         MFMailComposeViewController *composeViewController = [[MFMailComposeViewController alloc] initWithNibName:nil bundle:nil];
         [composeViewController setMailComposeDelegate:self];
         [composeViewController setToRecipients:@[@"feedback@mentalsnapp.com"]];
-        [composeViewController setSubject:[NSString stringWithFormat:@"%@: Feedback for mentalsnapp android app", dateString]];
+        [composeViewController setSubject:[NSString stringWithFormat:@"%@: Feedback for mentalsnapp ios app", dateString]];
         [self.navigationController presentViewController:composeViewController animated:YES completion:nil];
     }
 }
