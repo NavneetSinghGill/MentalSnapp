@@ -38,9 +38,22 @@ void uncaughtExceptionHandler(NSException *exception) {
   //Add crittercism and apteligent
     [Crittercism enableWithAppID:[self appteligentAppId]];
     
+    
+    // Configure tracker from GoogleService-Info.plist.
+    NSError *configureError;
+    [[GGLContext sharedInstance] configureWithError:&configureError];
+    NSAssert(!configureError, @"Error configuring Google services: %@", configureError);
+    
+    // Optional: configure GAI options.
+    GAI *gai = [GAI sharedInstance];
+    gai.trackUncaughtExceptions = YES;  // report uncaught exceptions
+    gai.logger.logLevel = kGAILogLevelVerbose;  // remove before app release
+    
     //Google analytics
-    id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-54478999-2"];
-
+    id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-92763376-1"];
+    [GAI sharedInstance].trackUncaughtExceptions = YES;
+    tracker.allowIDFACollection = YES;
+    
 //    if(appSettings.EnableFlurry)
 //    {
 //        //init Flurry

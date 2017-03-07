@@ -23,6 +23,7 @@
     BOOL isUserEditedName;
     MoodType selectedMood;
     Feeling *selectedFeeling;
+    CGFloat videoDuration;
 }
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -137,6 +138,7 @@
 - (void)didUploadVideoOnAWS
 {
     AVAsset *asset = [AVAsset assetWithURL:self.videoURL];
+    videoDuration = asset.duration.value;
     AVAssetImageGenerator *imageGenerator = [[AVAssetImageGenerator alloc]initWithAsset:asset];
     CMTime time = CMTimeMake(0, 1);
     CGImageRef imageRef = [imageGenerator copyCGImageAtTime:time actualTime:NULL error:NULL];
@@ -222,6 +224,7 @@
         {
             [self didClearStateOnPop];
             [self didSuccessAPI];
+            [self logEvents:post];
         }
     }];
 }
@@ -245,6 +248,70 @@
         [Banner showSuccessBannerWithSubtitle:@"Video uploaded successfully"];
     });
     
+}
+
+- (void)logEvents:(RecordPost *)post {
+    id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-92763376-1"];;
+    
+    UserModel *user = [UserManager sharedManager].userModel;
+    
+    NSString *category = [NSString stringWithFormat:@"%@ %@",user.userId, user.userName];
+    NSString *eventAction = [NSString stringWithFormat:@"%@",post.postName];
+    NSString *label = @"";
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"EEEE"];
+    label = [NSString stringWithFormat:@"Day of week of Recording: %@", [dateFormatter stringFromDate:[NSDate date]]];
+    
+    [tracker send:
+     [[GAIDictionaryBuilder createEventWithCategory:category
+                                             action:eventAction
+                                              label:label
+                                              value:@1] build]];
+    
+    if (selectedFeeling.feelingName.length != 0) {
+        label = [NSString stringWithFormat:@"Feeling Tags: %@",selectedFeeling.feelingName];
+        
+        [tracker send:
+         [[GAIDictionaryBuilder createEventWithCategory:category
+                                                 action:eventAction
+                                                  label:label
+                                                  value:@1] build]];
+    }
+    
+    if (post.postDesciption.length != 0) {
+        label = [NSString stringWithFormat:@"Free text associated: %@",post.postDesciption];
+        
+        [tracker send:
+         [[GAIDictionaryBuilder createEventWithCategory:category
+                                                 action:eventAction
+                                                  label:label
+                                                  value:@1] build]];
+    }
+    
+    label = [NSString stringWithFormat:@"Length of recording: %f",videoDuration];
+    
+    [tracker send:
+     [[GAIDictionaryBuilder createEventWithCategory:category
+                                             action:eventAction
+                                              label:label
+                                              value:@1] build]];
+    
+    label = [NSString stringWithFormat:@"Mood rating: %@",post.moodId];
+    
+    [tracker send:
+     [[GAIDictionaryBuilder createEventWithCategory:category
+                                             action:eventAction
+                                              label:label
+                                              value:@1] build]];
+    
+    label = [NSString stringWithFormat:@"Time of recording: %@",([[NSDate date] stringInUKFormat])];
+    
+    [tracker send:
+     [[GAIDictionaryBuilder createEventWithCategory:category
+                                             action:eventAction
+                                              label:label
+                                              value:@1] build]];
 }
 
 - (UIBarButtonItem *)uploadButton {

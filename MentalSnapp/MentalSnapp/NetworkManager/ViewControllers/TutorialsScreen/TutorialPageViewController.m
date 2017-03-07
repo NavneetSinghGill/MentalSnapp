@@ -237,11 +237,13 @@
     childViewController.selectedTutorial = [self.tutorialPages objectAtIndex:index];
     
     childViewController.index = index;
-    [[GAI sharedInstance].defaultTracker send:
-     [[GAIDictionaryBuilder createEventWithCategory:@"Tutorial"
-                                             action:@"123"
-                                              label:@"Settings"
-                                              value:nil] build]];
+    
+    
+//    id<GAITracker> tracker1 = [[GAI sharedInstance] defaultTracker];
+//    [tracker1 set:kGAIScreenName value:@"Stopwatch"];
+//    [tracker1 send:[[GAIDictionaryBuilder createScreenView] build]];
+//    
+//    [[GAI sharedInstance] dispatch];
     
     return childViewController;
     
