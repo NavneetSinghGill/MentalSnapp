@@ -10,7 +10,7 @@
 #import "TutorialViewController.h"
 #import "TutorialPageModel.h"
 
-@interface TutorialPageViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
+@interface TutorialPageViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate, RecordProtocol>
 
 @property (weak, nonatomic) IBOutlet UIView *pageContainerView;
 @property (weak, nonatomic) IBOutlet UIImageView *pageIndicatorImageView;
@@ -44,17 +44,27 @@
     return YES;
 }
 
+#pragma mark - RecordProtocol Delegate method
+
+- (void)recordButtonTapped {
+    [self nextButtonTap];
+}
+
 #pragma mark - IBActions
 
 - (IBAction)nextButtonTapped:(id)sender
 {
+    [self nextButtonTap];
+}
+
+- (void)nextButtonTap {
     if(self.isFirstTutorial)
     {
         [[UserManager sharedManager] showTutorialScreen:NO];
     }
     else
     {
-        [[UserManager sharedManager] showLoginViewController];
+        [[UserManager sharedManager] showSignupViewController];
         
         [UserDefaults setBool:NO forKey:kIsTutorialShownBefore];
         [UserDefaults synchronize];
@@ -223,6 +233,7 @@
 - (TutorialViewController *)viewControllerAtIndex:(NSUInteger)index {
     
     TutorialViewController *childViewController = [[UIStoryboard storyboardWithName:kTutorialStoryboard bundle:nil] instantiateViewControllerWithIdentifier:kTutorialViewControllerIdentifier];
+    childViewController.recordDelegate = self;
     childViewController.selectedTutorial = [self.tutorialPages objectAtIndex:index];
     
     childViewController.index = index;
@@ -250,10 +261,15 @@
         if(self.currentIndex == (self.maxTutorialsCount - 1))
         {
             [self.nextButton setTitle:@"Next" forState:UIControlStateNormal];
+            self.nextButton.hidden = NO;
+            if (_isFirstTutorial) {
+                self.nextButton.hidden = YES;
+            }
         }
         else
         {
             [self.nextButton setTitle:@"Skip" forState:UIControlStateNormal];
+            self.nextButton.hidden = NO;
         }
     }
 }

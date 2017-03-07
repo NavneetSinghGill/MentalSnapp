@@ -22,6 +22,7 @@
 - (void)updateProfileURL:(NSString *)profileURL;
 - (void)removeUserFromUserDefault;
 - (void)showLoginViewController;
+- (void)showSignupViewController;
 - (void)showTutorialScreen:(BOOL)isFirstTutorial;
 
 + (BOOL)isValidEmail:(NSString *)checkString;

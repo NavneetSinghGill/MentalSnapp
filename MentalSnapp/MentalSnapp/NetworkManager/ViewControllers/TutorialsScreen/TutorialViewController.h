@@ -10,10 +10,18 @@
 #import "TutorialPageModel.h"
 #import "MSViewController.h"
 
+@protocol RecordProtocol <NSObject>
+
+- (void)recordButtonTapped;
+
+@end
+
 @interface TutorialViewController : MSViewController
 
 @property (strong, nonatomic) TutorialPageModel *selectedTutorial;
 
 @property (assign, nonatomic) NSInteger index;
+
+@property (assign, nonatomic) id<RecordProtocol> recordDelegate;
 
 @end

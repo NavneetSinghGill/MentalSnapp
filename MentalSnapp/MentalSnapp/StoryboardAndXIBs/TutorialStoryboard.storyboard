@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Hb1-xG-zmd">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Hb1-xG-zmd">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -49,7 +49,7 @@
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="page1_1" translatesAutoresizingMaskIntoConstraints="NO" id="IsX-Rg-9K7">
-                                        <rect key="frame" x="100.5" y="24" width="174" height="12"/>
+                                        <rect key="frame" x="101" y="24" width="174" height="12"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -116,6 +116,32 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fm0-yj-jMU" userLabel="DescriptionView">
                                 <rect key="frame" x="0.0" y="285" width="375" height="382"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCo-Nc-dkI" userLabel="Tap here for our guide to recording your first videos">
+                                        <rect key="frame" x="20" y="20" width="335" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="yXI-SX-hQl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="13"/>
+                                        <state key="normal" title="Tap here for our guide to recording your first videos">
+                                            <color key="titleColor" red="0.91372549020000005" green="0.39607843139999999" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapToRecordButton:" destination="vSt-VX-LZy" eventType="touchUpInside" id="kZ7-nt-LXh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPN-LW-qdX" userLabel="Tap here to go straight to using the app">
+                                        <rect key="frame" x="20" y="50" width="335" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="PY8-bP-fCJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="13"/>
+                                        <state key="normal" title="Tap here to go straight to using the app">
+                                            <color key="titleColor" red="0.91372549020000005" green="0.39607843139999999" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapToSignupButton:" destination="vSt-VX-LZy" eventType="touchUpInside" id="uXG-n8-q9p"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmI-IE-EgT">
                                         <rect key="frame" x="20" y="20" width="335" height="20"/>
                                         <constraints>
@@ -133,13 +159,25 @@
                                         <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AlS-Tw-zZp">
+                                        <rect key="frame" x="20" y="100" width="259" height="137"/>
+                                        <state key="normal" image="signature"/>
+                                    </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="eCo-Nc-dkI" firstAttribute="leading" secondItem="fm0-yj-jMU" secondAttribute="leading" constant="20" id="6LW-Nr-roB"/>
                                     <constraint firstItem="cmI-IE-EgT" firstAttribute="top" secondItem="fm0-yj-jMU" secondAttribute="top" constant="20" id="9Y5-3Y-ZgV"/>
+                                    <constraint firstItem="AlS-Tw-zZp" firstAttribute="top" secondItem="vPN-LW-qdX" secondAttribute="bottom" constant="20" id="IMG-sY-6PJ"/>
+                                    <constraint firstItem="vPN-LW-qdX" firstAttribute="leading" secondItem="fm0-yj-jMU" secondAttribute="leading" constant="20" id="Rat-QP-33o"/>
+                                    <constraint firstItem="vPN-LW-qdX" firstAttribute="top" secondItem="eCo-Nc-dkI" secondAttribute="bottom" id="SHu-6G-YNf"/>
                                     <constraint firstItem="dhA-iF-QmF" firstAttribute="leading" secondItem="fm0-yj-jMU" secondAttribute="leading" constant="15" id="Wu5-uF-rLO"/>
+                                    <constraint firstItem="eCo-Nc-dkI" firstAttribute="top" secondItem="fm0-yj-jMU" secondAttribute="top" constant="20" id="XDo-37-jdA"/>
                                     <constraint firstItem="cmI-IE-EgT" firstAttribute="leading" secondItem="fm0-yj-jMU" secondAttribute="leading" constant="20" id="bxV-9c-2hR"/>
                                     <constraint firstAttribute="trailing" secondItem="dhA-iF-QmF" secondAttribute="trailing" constant="15" id="doO-K9-Dp2"/>
+                                    <constraint firstAttribute="trailing" secondItem="vPN-LW-qdX" secondAttribute="trailing" constant="20" id="dwV-b3-uD5"/>
+                                    <constraint firstItem="AlS-Tw-zZp" firstAttribute="leading" secondItem="fm0-yj-jMU" secondAttribute="leading" constant="20" id="kNt-uj-vbm"/>
                                     <constraint firstAttribute="bottom" secondItem="dhA-iF-QmF" secondAttribute="bottom" id="mLo-WW-Xzt"/>
+                                    <constraint firstAttribute="trailing" secondItem="eCo-Nc-dkI" secondAttribute="trailing" constant="20" id="vnr-UJ-rbN"/>
                                     <constraint firstAttribute="trailing" secondItem="cmI-IE-EgT" secondAttribute="trailing" constant="20" id="wet-Gf-XhY"/>
                                     <constraint firstItem="dhA-iF-QmF" firstAttribute="top" secondItem="cmI-IE-EgT" secondAttribute="bottom" constant="3" id="z5k-Fg-MnL"/>
                                 </constraints>
@@ -158,6 +196,9 @@
                     <connections>
                         <outlet property="descriptionTextView" destination="dhA-iF-QmF" id="qrH-VZ-RfZ"/>
                         <outlet property="mainImageView" destination="OVM-VF-Rdl" id="XSk-C1-VM5"/>
+                        <outlet property="signatureImageButton" destination="AlS-Tw-zZp" id="gfb-E5-caa"/>
+                        <outlet property="tapToRecordButton" destination="eCo-Nc-dkI" id="y1n-cr-5rH"/>
+                        <outlet property="tapToSignupButton" destination="vPN-LW-qdX" id="pzh-hD-KWv"/>
                         <outlet property="titleLabel" destination="cmI-IE-EgT" id="VgL-Cc-7wr"/>
                     </connections>
                 </viewController>
@@ -168,5 +209,6 @@
     </scenes>
     <resources>
         <image name="page1_1" width="174" height="12"/>
+        <image name="signature" width="259" height="137"/>
     </resources>
 </document>

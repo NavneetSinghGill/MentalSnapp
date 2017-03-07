@@ -6,6 +6,7 @@
 #import "UserManager.h"
 #import "LoginViewController.h"
 #import "TutorialPageViewController.h"
+#import "SignUpViewController.h"
 
 @implementation UserManager
 
@@ -84,6 +85,24 @@ static dispatch_once_t userOnceToken;
                        options:UIViewAnimationOptionTransitionFlipFromRight
                     animations:^{
                         [[ApplicationDelegate window] setRootViewController:[[UINavigationController alloc] initWithRootViewController:loginViewController]];
+                    }
+                    completion:nil];
+}
+
+- (void)showSignupViewController
+{
+    LoginViewController *loginViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    
+    SignUpViewController *signUpViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SignUpViewController"];
+    
+    UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:loginViewController];
+    [navController setViewControllers:[NSArray arrayWithObjects:loginViewController, signUpViewController, nil]];
+    
+    [UIView transitionWithView:[ApplicationDelegate window]
+                      duration:0.5
+                       options:UIViewAnimationOptionTransitionFlipFromRight
+                    animations:^{
+                        [[ApplicationDelegate window] setRootViewController:navController];
                     }
                     completion:nil];
 }
