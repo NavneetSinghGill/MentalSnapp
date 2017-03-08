@@ -47,7 +47,6 @@ void uncaughtExceptionHandler(NSException *exception) {
     // Optional: configure GAI options.
     GAI *gai = [GAI sharedInstance];
     gai.trackUncaughtExceptions = YES;  // report uncaught exceptions
-    gai.logger.logLevel = kGAILogLevelVerbose;  // remove before app release
     
     //Google analytics
     id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-92763376-1"];

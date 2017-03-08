@@ -138,7 +138,7 @@
 - (void)didUploadVideoOnAWS
 {
     AVAsset *asset = [AVAsset assetWithURL:self.videoURL];
-    videoDuration = asset.duration.value;
+    videoDuration = CMTimeGetSeconds(asset.duration);
     AVAssetImageGenerator *imageGenerator = [[AVAssetImageGenerator alloc]initWithAsset:asset];
     CMTime time = CMTimeMake(0, 1);
     CGImageRef imageRef = [imageGenerator copyCGImageAtTime:time actualTime:NULL error:NULL];
