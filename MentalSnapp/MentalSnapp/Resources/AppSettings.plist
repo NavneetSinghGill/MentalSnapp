@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NetworkMode</key>
-	<string>STAGING</string>
+	<string>LIVE</string>
 	<key>LocalURL</key>
 	<string>192.168.1.38:3001</string>
 	<key>ProductionURL</key>
@@ -13,7 +13,7 @@
 	<key>URLPathSubstring</key>
 	<string>/appspot</string>
 	<key>EnableSecureConnection</key>
-	<false/>
+	<true/>
 	<key>EnablePullToRefresh</key>
 	<false/>
 	<key>EnableBanner</key>

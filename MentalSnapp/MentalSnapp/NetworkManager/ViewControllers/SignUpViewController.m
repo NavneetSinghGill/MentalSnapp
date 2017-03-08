@@ -48,6 +48,8 @@
     [self setMaxDate18Year];
     [self.datePicker addTarget:self action:@selector(dateIsChanged:) forControlEvents:UIControlEventValueChanged];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardDidHide) name:UIKeyboardWillHideNotification object:nil];
+    
+    [UserDefaults setBool:YES forKey:kIsTutorialShownBefore];
 }
 
 - (BOOL)prefersStatusBarHidden {
