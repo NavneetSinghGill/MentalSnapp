@@ -290,6 +290,8 @@
             self.userImage = nil;
             [self backButtonTapped];
             [Banner showSuccessBannerWithSubtitle:LocalizedString(@"UserUpdationMessage")];
+            
+            [[UserManager sharedManager] sendAnalyticsForGenderAndDOBforUser:user];
         }
         [self showInProgress:NO];
     }];

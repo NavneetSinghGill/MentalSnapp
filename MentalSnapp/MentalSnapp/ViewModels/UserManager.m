@@ -76,6 +76,38 @@ static dispatch_once_t userOnceToken;
     [self showLoginViewController];
 }
 
+- (void)sendAnalyticsForGenderAndDOBforUser:(UserModel *)user {
+    id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-92763376-1"];
+    
+    NSString *category = [NSString stringWithFormat:@"%@_%@",user.userId, user.userName];
+    NSString *eventAction;
+    NSString *label;
+    
+    if (user.gender.length !=0) {
+        eventAction = @"Gender";
+        
+        label = user.gender;
+        
+        [tracker send:
+         [[GAIDictionaryBuilder createEventWithCategory:category
+                                                 action:eventAction
+                                                  label:label
+                                                  value:@1] build]];
+    }
+    
+    if (user.dateOfBirth.length != 0) {
+        eventAction = @"Date of birth";
+        
+        label = user.dateOfBirth;
+        
+        [tracker send:
+         [[GAIDictionaryBuilder createEventWithCategory:category
+                                                 action:eventAction
+                                                  label:label
+                                                  value:@1] build]];
+    }
+}
+
 - (void)showLoginViewController
 {
     LoginViewController *loginViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"LoginViewController"];

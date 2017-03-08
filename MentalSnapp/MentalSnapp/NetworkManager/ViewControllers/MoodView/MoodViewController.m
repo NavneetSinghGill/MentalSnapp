@@ -251,11 +251,11 @@
 }
 
 - (void)logEvents:(RecordPost *)post {
-    id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-92763376-1"];;
+    id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-92763376-1"];
     
     UserModel *user = [UserManager sharedManager].userModel;
     
-    NSString *category = [NSString stringWithFormat:@"%@ %@",user.userId, user.userName];
+    NSString *category = [NSString stringWithFormat:@"%@_%@",user.userId, user.userName];
     NSString *eventAction = [NSString stringWithFormat:@"%@",post.postName];
     NSString *label = @"";
     
@@ -289,7 +289,7 @@
                                                   value:@1] build]];
     }
     
-    label = [NSString stringWithFormat:@"Length of recording: %f",videoDuration];
+    label = [NSString stringWithFormat:@"Length of recording: %f secs",videoDuration];
     
     [tracker send:
      [[GAIDictionaryBuilder createEventWithCategory:category
@@ -297,7 +297,7 @@
                                               label:label
                                               value:@1] build]];
     
-    label = [NSString stringWithFormat:@"Mood rating: %@",post.moodId];
+    label = [NSString stringWithFormat:@"Mood rating: %@ (%@)",post.moodId, [self getStringForMoodType:selectedMood]];
     
     [tracker send:
      [[GAIDictionaryBuilder createEventWithCategory:category
@@ -312,6 +312,39 @@
                                              action:eventAction
                                               label:label
                                               value:@1] build]];
+}
+
+- (NSString*)getStringForMoodType:(MoodType)moodType {
+    NSString *result = nil;
+    
+    switch(moodType) {
+        case KNone:
+            return @"KNone";
+            break;
+        case TheBestMood:
+            return @"The Best Mood";
+            break;
+        case VeryGoodMood:
+            return @"Very Good Mood";
+            break;
+        case GoodMood:
+            return @"Good Mood";
+            break;
+        case OkMood:
+            return @"Ok Mood";
+            break;
+        case BadMood:
+            return @"Bad Mood";
+            break;
+        case VeryBadMood:
+            return @"Very Bad Mood";
+            break;
+        case TheWorstMood:
+            return @"The Worst Mood";
+            break;
+    }
+    
+    return result;
 }
 
 - (UIBarButtonItem *)uploadButton {

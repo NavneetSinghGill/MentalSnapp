@@ -27,4 +27,6 @@
 
 + (BOOL)isValidEmail:(NSString *)checkString;
 - (void)logoutUser;
+
+- (void)sendAnalyticsForGenderAndDOBforUser:(UserModel *)user;
 @end

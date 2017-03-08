@@ -53,7 +53,13 @@
                 
                 if([response hasValueForKey:@"user"]) {
                     NSError *error;
-                    [UserManager sharedManager].userModel = [[UserModel alloc] initWithDictionary:[response objectForKey:@"user"] error:&error];
+                    
+                    UserModel *user = [[UserModel alloc] initWithDictionary:[response objectForKey:@"user"] error:&error];
+                    [UserManager sharedManager].userModel = user;
+                    
+                    //Analytics
+                    [[UserManager sharedManager] sendAnalyticsForGenderAndDOBforUser:user];
+
                 }
                 [[UserManager sharedManager] saveLoggedinUserInfoInUserDefault];
                 [[ScheduleManager sharedInstance] fetchAllSchedules];
