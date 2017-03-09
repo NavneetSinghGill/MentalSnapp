@@ -66,6 +66,14 @@
     } else {
         _tapToRecordButton.hidden = _tapToSignupButton.hidden = _signatureImageView.hidden = NO;
         _titleLabel.hidden = _descriptionTextView.hidden = YES;
+        
+        if (_didOpenFromMoreScreen) {
+            [_tapToRecordButton.titleLabel setText:@"Tap here to go back at the More Screen"];
+            _tapToSignupButton.hidden = YES;
+        } else {
+            [_tapToRecordButton.titleLabel setText:@"Tap here for our guide to recording your first videos"];
+            _tapToSignupButton.hidden = NO;
+        }
     }
 }
 

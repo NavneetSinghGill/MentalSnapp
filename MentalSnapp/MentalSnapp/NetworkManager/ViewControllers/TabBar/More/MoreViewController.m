@@ -8,6 +8,7 @@
 #import "ProfileViewController.h"
 #import "SupportScreenViewController.h"
 #import "TermsViewController.h"
+#import "TutorialPageViewController.h"
 
 @interface MoreViewController () <UITableViewDelegate, UITableViewDataSource> {
     NSArray *tableViewCellTitles;
@@ -28,13 +29,27 @@
     [self initialSetup];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.tabBarController.tabBar.hidden = NO;
+    [[self navigationController] setNavigationBarHidden:NO];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+//    self.navigationController.navigationBar.hidden = NO;
+//    self.tabBarController.tabBar.hidden = NO;
+    
+}
+
 #pragma mark - Private methods
 
 - (void)initialSetup {
     [self setNavigationBarButtonTitle:@"Mental Snapp"];
     
-    tableViewCellTitles = @[@"Queued exercises", @"Profile", @"Technical support", @"Terms and conditions", @"Privacy policy"];
-    tableViewCellTitleImageNames = @[@"MoreQueuedExercise", @"MoreProfile", @"MoreIssue", @"MoreReport", @"MorePolicy"];
+    tableViewCellTitles = @[@"Queued exercises", @"Profile", @"Technical support", @"Terms and conditions", @"Privacy policy", @"How To Use", @"How to record"];
+    tableViewCellTitleImageNames = @[@"MoreQueuedExercise", @"MoreProfile", @"MoreIssue", @"MoreReport", @"MorePolicy", @"MoreHowToUse", @"MoreHowToRecord"];
     [self.tableView reloadData];
 }
 
@@ -48,7 +63,7 @@
 #pragma mark Datasource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return tableViewCellTitles.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -91,6 +106,23 @@
         }
         case 4: {
             [self performSegueWithIdentifier:@"ToPrivacyPolicyScreen" sender:self];
+            break;
+        }
+        case 5: {
+            TutorialPageViewController *tutorialPageViewController = [[UIStoryboard storyboardWithName:@"TutorialStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"TutorialPageViewController"];
+            tutorialPageViewController.isFirstTutorial = YES;
+            tutorialPageViewController.didOpenFromMoreScreen = YES;
+            [self.navigationController pushViewController:tutorialPageViewController animated:YES];
+            [[self navigationController] setNavigationBarHidden:YES animated:YES];
+            self.tabBarController.tabBar.hidden = YES;
+            break;
+        }
+        case 6: {
+            TutorialPageViewController *tutorialPageViewController = [[UIStoryboard storyboardWithName:@"TutorialStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"TutorialPageViewController"];
+            tutorialPageViewController.didOpenFromMoreScreen = YES;
+            [self.navigationController pushViewController:tutorialPageViewController animated:YES];
+            [[self navigationController] setNavigationBarHidden:YES animated:YES];
+            self.tabBarController.tabBar.hidden = YES;
             break;
         }
             

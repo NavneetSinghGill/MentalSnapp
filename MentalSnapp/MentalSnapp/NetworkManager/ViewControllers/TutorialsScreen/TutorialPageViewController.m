@@ -58,6 +58,12 @@
 }
 
 - (void)nextButtonTap {
+    if (_didOpenFromMoreScreen) {
+        //Go back to more screen
+        [self.navigationController popViewControllerAnimated:YES];
+        return;
+    }
+    
     if(self.isFirstTutorial)
     {
         [[UserManager sharedManager] showTutorialScreen:NO];
@@ -237,6 +243,7 @@
     childViewController.selectedTutorial = [self.tutorialPages objectAtIndex:index];
     
     childViewController.index = index;
+    childViewController.didOpenFromMoreScreen = _didOpenFromMoreScreen;
     
     
 //    id<GAITracker> tracker1 = [[GAI sharedInstance] defaultTracker];
@@ -267,10 +274,15 @@
         
         if(self.currentIndex == (self.maxTutorialsCount - 1))
         {
-            [self.nextButton setTitle:@"Next" forState:UIControlStateNormal];
-            self.nextButton.hidden = NO;
             if (_isFirstTutorial) {
                 self.nextButton.hidden = YES;
+            } else {
+                if (_didOpenFromMoreScreen) {
+                    [self.nextButton setTitle:@"Finish" forState:UIControlStateNormal];
+                } else {
+                    [self.nextButton setTitle:@"Next" forState:UIControlStateNormal];
+                }
+                self.nextButton.hidden = NO;
             }
         }
         else

@@ -12,5 +12,6 @@
 @interface TutorialPageViewController : MSViewController
 
 @property (nonatomic, assign) BOOL isFirstTutorial;
+@property (nonatomic, assign) BOOL didOpenFromMoreScreen;
 
 @end
