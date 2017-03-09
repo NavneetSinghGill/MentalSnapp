@@ -68,10 +68,11 @@
         _titleLabel.hidden = _descriptionTextView.hidden = YES;
         
         if (_didOpenFromMoreScreen) {
-            [_tapToRecordButton.titleLabel setText:@"Tap here to go back at the More Screen"];
+            [_tapToRecordButton setTitle:@"Go on, give it a try!" forState:UIControlStateNormal];
+            [_tapToRecordButton.titleLabel setFont:[UIFont fontWithName:@"Roboto-Medium" size:15.f]];
             _tapToSignupButton.hidden = YES;
         } else {
-            [_tapToRecordButton.titleLabel setText:@"Tap here for our guide to recording your first videos"];
+            [_tapToRecordButton setTitle:@"Tap here for our guide to recording your first video" forState:UIControlStateNormal];
             _tapToSignupButton.hidden = NO;
         }
     }
