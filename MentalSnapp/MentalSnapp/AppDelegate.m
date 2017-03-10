@@ -82,10 +82,10 @@ void uncaughtExceptionHandler(NSException *exception) {
         ApplicationDelegate.window.rootViewController = self.tabBarController;
         [[ScheduleManager sharedInstance] fetchAllSchedules];
     }
-    else if (![UserDefaults boolForKey:kIsTutorialShownBefore])
-    {
-        [[UserManager sharedManager] showTutorialScreen:YES];
-    }
+//    else if (![UserDefaults boolForKey:kIsTutorialShownBefore])
+//    {
+//        [[UserManager sharedManager] showTutorialScreen:YES];
+//    }
     
     [Crittercism setUsername:([UserDefaults boolForKey:kIsUserLoggedIn])?[UserManager sharedManager].userModel.userName:@""];
     

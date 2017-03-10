@@ -48,8 +48,8 @@
 - (void)initialSetup {
     [self setNavigationBarButtonTitle:@"Mental Snapp"];
     
-    tableViewCellTitles = @[@"Queued exercises", @"Profile", @"Technical support", @"Terms and conditions", @"Privacy policy", @"How To Use", @"How to record"];
-    tableViewCellTitleImageNames = @[@"MoreQueuedExercise", @"MoreProfile", @"MoreIssue", @"MoreReport", @"MorePolicy", @"MoreHowToUse", @"MoreHowToRecord"];
+    tableViewCellTitles = @[@"Queued exercises", @"Profile", @"Technical support", @"Terms and conditions", @"Privacy policy", @"How To Use"];//, @"How to record"];
+    tableViewCellTitleImageNames = @[@"MoreQueuedExercise", @"MoreProfile", @"MoreIssue", @"MoreReport", @"MorePolicy", @"MoreHowToUse"];//, @"MoreHowToRecord"];
     [self.tableView reloadData];
 }
 
@@ -91,6 +91,7 @@
         case 1: {
             UIStoryboard *profileStoryboard = [UIStoryboard storyboardWithName:KProfileStoryboard bundle:nil];
             profileViewController = [profileStoryboard instantiateViewControllerWithIdentifier:KProfileViewControllerIdentifier];
+            profileViewController.didOpenFromMoreScreen = YES;
             [self.navigationController pushViewController:profileViewController animated:YES];
             break;
         }

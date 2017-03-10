@@ -7,6 +7,7 @@
 #import "RequestManager.h"
 #import "WelcomeBackViewController.h"
 #import <Crittercism/Crittercism.h>
+#import "TutorialPageViewController.h"
 
 @interface LoginViewController() <UITextFieldDelegate> {
     NSInteger kLogoTopConstraintDefaultValue;
@@ -84,19 +85,25 @@
                 [UserDefaults synchronize];
                 [Crittercism setUsername:self.userEmailTextField.text];
                 if ([UserManager sharedManager].isFirstTime) {
-                    [UIView transitionWithView:ApplicationDelegate.window
-                                      duration:0.5f
-                                       options:UIViewAnimationOptionTransitionFlipFromLeft
-                                    animations:^{
-                                        UINavigationController *controller = [[UINavigationController alloc] initWithRootViewController:[[UIStoryboard storyboardWithName:KProfileStoryboard bundle:nil] instantiateViewControllerWithIdentifier:KProfileViewControllerIdentifier]];
-                                        [[UINavigationBar appearance] setShadowImage:[UIImage new]];
-                                        [[UINavigationBar appearance] setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-                                        [[UINavigationBar appearance]  setTranslucent:NO];
-                                        controller.navigationBar.translucent = NO;
-                                        controller.navigationBar.shadowImage = [UIImage new];
-                                        controller.navigationBar.backIndicatorImage = [UIImage new];
-                                        ApplicationDelegate.window.rootViewController = controller;
-                                    } completion:nil];
+//                    [UIView transitionWithView:ApplicationDelegate.window
+//                                      duration:0.5f
+//                                       options:UIViewAnimationOptionTransitionFlipFromLeft
+//                                    animations:^{
+//                                        UINavigationController *controller = [[UINavigationController alloc] initWithRootViewController:[[UIStoryboard storyboardWithName:KProfileStoryboard bundle:nil] instantiateViewControllerWithIdentifier:KProfileViewControllerIdentifier]];
+//                                        [[UINavigationBar appearance] setShadowImage:[UIImage new]];
+//                                        [[UINavigationBar appearance] setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+//                                        [[UINavigationBar appearance]  setTranslucent:NO];
+//                                        controller.navigationBar.translucent = NO;
+//                                        controller.navigationBar.shadowImage = [UIImage new];
+//                                        controller.navigationBar.backIndicatorImage = [UIImage new];
+//                                        ApplicationDelegate.window.rootViewController = controller;
+//                                    } completion:nil];
+                    
+                    UIStoryboard *tutorialStoryBoard = [UIStoryboard storyboardWithName:kTutorialStoryboard bundle:nil];
+                    TutorialPageViewController *pageVC = [tutorialStoryBoard instantiateViewControllerWithIdentifier:@"TutorialPageViewController"];
+                    pageVC.isFirstTutorial = YES;
+                    [self.navigationController pushViewController:pageVC animated:YES];
+                    [self.navigationController setNavigationBarHidden:YES animated:YES];
                 } else {
                     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
                     ApplicationDelegate.tabBarController = [mainStoryboard instantiateViewControllerWithIdentifier:@"MainTabController"];

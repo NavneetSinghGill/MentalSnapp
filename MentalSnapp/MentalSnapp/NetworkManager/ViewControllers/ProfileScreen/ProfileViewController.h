@@ -11,4 +11,6 @@
 
 @property (nonatomic, strong) UserModel *user;
 
+@property (nonatomic, assign) BOOL didOpenFromMoreScreen;
+
 @end

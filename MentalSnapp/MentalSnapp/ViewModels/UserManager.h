@@ -24,6 +24,7 @@
 - (void)showLoginViewController;
 - (void)showSignupViewController;
 - (void)showTutorialScreen:(BOOL)isFirstTutorial;
+- (void)openTabBar;
 
 + (BOOL)isValidEmail:(NSString *)checkString;
 - (void)logoutUser;

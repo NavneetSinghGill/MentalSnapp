@@ -153,6 +153,11 @@ static dispatch_once_t userOnceToken;
                     completion:nil];
 }
 
+- (void)openTabBar {
+    ApplicationDelegate.tabBarController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MainTabController"];
+    ApplicationDelegate.window.rootViewController = ApplicationDelegate.tabBarController;
+}
+
 //*>    Save Logged in user's info in user default
 - (void)removeUserFromUserDefault
 {

@@ -25,5 +25,6 @@
 @property (assign, nonatomic) id<RecordProtocol> recordDelegate;
 
 @property (assign, nonatomic) BOOL didOpenFromMoreScreen;
+@property (assign, nonatomic) BOOL isFirstTutorial;
 
 @end

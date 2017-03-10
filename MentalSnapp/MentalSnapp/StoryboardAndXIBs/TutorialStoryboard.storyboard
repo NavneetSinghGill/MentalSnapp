@@ -14,6 +14,9 @@
         <array key="Roboto-Medium.ttf">
             <string>Roboto-Medium</string>
         </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Tutorial Page View Controller-->
@@ -117,7 +120,7 @@
                                 <rect key="frame" x="0.0" y="285" width="375" height="382"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCo-Nc-dkI" userLabel="Tap here for our guide to recording your first videos">
-                                        <rect key="frame" x="20" y="20" width="335" height="30"/>
+                                        <rect key="frame" x="20" y="48" width="335" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="yXI-SX-hQl"/>
                                         </constraints>
@@ -130,12 +133,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPN-LW-qdX" userLabel="Tap here to go straight to using the app">
-                                        <rect key="frame" x="20" y="50" width="335" height="30"/>
+                                        <rect key="frame" x="20" y="78" width="335" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="PY8-bP-fCJ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="12"/>
-                                        <state key="normal" title="Tap here to go straight to using the app">
+                                        <state key="normal" title="Tap to start immediately">
                                             <color key="titleColor" red="0.91372549020000005" green="0.39607843139999999" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -160,27 +163,41 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signature" translatesAutoresizingMaskIntoConstraints="NO" id="Czq-ia-u2J">
-                                        <rect key="frame" x="20" y="90" width="259" height="137"/>
+                                        <rect key="frame" x="20" y="118" width="259" height="137"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="259" id="RDx-N2-COe"/>
                                             <constraint firstAttribute="height" constant="137" id="Sfr-PA-xwu"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHS-u7-39D">
+                                        <rect key="frame" x="177" y="360" width="21" height="22"/>
+                                        <state key="normal" image="MoreHowToRecord"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enjoy telling your story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oi-pM-ZWg">
+                                        <rect key="frame" x="20" y="20" width="150" height="18"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Czq-ia-u2J" firstAttribute="leading" secondItem="fm0-yj-jMU" secondAttribute="leading" constant="20" id="5F1-pK-qgm"/>
                                     <constraint firstItem="eCo-Nc-dkI" firstAttribute="leading" secondItem="fm0-yj-jMU" secondAttribute="leading" constant="20" id="6LW-Nr-roB"/>
                                     <constraint firstItem="cmI-IE-EgT" firstAttribute="top" secondItem="fm0-yj-jMU" secondAttribute="top" constant="20" id="9Y5-3Y-ZgV"/>
+                                    <constraint firstItem="eCo-Nc-dkI" firstAttribute="top" secondItem="1oi-pM-ZWg" secondAttribute="bottom" constant="10" id="C7h-5j-Tj5"/>
+                                    <constraint firstAttribute="bottom" secondItem="FHS-u7-39D" secondAttribute="bottom" id="Kz0-MB-ghK"/>
+                                    <constraint firstItem="FHS-u7-39D" firstAttribute="centerX" secondItem="fm0-yj-jMU" secondAttribute="centerX" id="PEE-68-gcv"/>
+                                    <constraint firstItem="1oi-pM-ZWg" firstAttribute="top" secondItem="fm0-yj-jMU" secondAttribute="top" constant="20" id="Q4d-Iu-Ae5"/>
                                     <constraint firstItem="vPN-LW-qdX" firstAttribute="leading" secondItem="fm0-yj-jMU" secondAttribute="leading" constant="20" id="Rat-QP-33o"/>
                                     <constraint firstItem="vPN-LW-qdX" firstAttribute="top" secondItem="eCo-Nc-dkI" secondAttribute="bottom" id="SHu-6G-YNf"/>
                                     <constraint firstItem="dhA-iF-QmF" firstAttribute="leading" secondItem="fm0-yj-jMU" secondAttribute="leading" constant="15" id="Wu5-uF-rLO"/>
-                                    <constraint firstItem="eCo-Nc-dkI" firstAttribute="top" secondItem="fm0-yj-jMU" secondAttribute="top" constant="20" id="XDo-37-jdA"/>
                                     <constraint firstItem="cmI-IE-EgT" firstAttribute="leading" secondItem="fm0-yj-jMU" secondAttribute="leading" constant="20" id="bxV-9c-2hR"/>
                                     <constraint firstAttribute="trailing" secondItem="dhA-iF-QmF" secondAttribute="trailing" constant="15" id="doO-K9-Dp2"/>
                                     <constraint firstAttribute="trailing" secondItem="vPN-LW-qdX" secondAttribute="trailing" constant="20" id="dwV-b3-uD5"/>
                                     <constraint firstItem="Czq-ia-u2J" firstAttribute="top" secondItem="vPN-LW-qdX" secondAttribute="bottom" constant="10" id="j19-u9-sHf"/>
                                     <constraint firstAttribute="bottom" secondItem="dhA-iF-QmF" secondAttribute="bottom" id="mLo-WW-Xzt"/>
                                     <constraint firstAttribute="trailing" secondItem="eCo-Nc-dkI" secondAttribute="trailing" constant="20" id="vnr-UJ-rbN"/>
+                                    <constraint firstItem="1oi-pM-ZWg" firstAttribute="leading" secondItem="fm0-yj-jMU" secondAttribute="leading" constant="20" id="vyS-gd-Nrt"/>
                                     <constraint firstAttribute="trailing" secondItem="cmI-IE-EgT" secondAttribute="trailing" constant="20" id="wet-Gf-XhY"/>
                                     <constraint firstItem="dhA-iF-QmF" firstAttribute="top" secondItem="cmI-IE-EgT" secondAttribute="bottom" constant="3" id="z5k-Fg-MnL"/>
                                 </constraints>
@@ -198,7 +215,9 @@
                     </view>
                     <connections>
                         <outlet property="descriptionTextView" destination="dhA-iF-QmF" id="qrH-VZ-RfZ"/>
+                        <outlet property="enjoylabel" destination="1oi-pM-ZWg" id="9nT-OJ-SNY"/>
                         <outlet property="mainImageView" destination="OVM-VF-Rdl" id="XSk-C1-VM5"/>
+                        <outlet property="recordImageButton" destination="FHS-u7-39D" id="LPV-ut-ERf"/>
                         <outlet property="signatureImageView" destination="Czq-ia-u2J" id="fS8-5q-a77"/>
                         <outlet property="tapToRecordButton" destination="eCo-Nc-dkI" id="y1n-cr-5rH"/>
                         <outlet property="tapToSignupButton" destination="vPN-LW-qdX" id="pzh-hD-KWv"/>
@@ -211,6 +230,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="MoreHowToRecord" width="21" height="21"/>
         <image name="page1_1" width="174" height="12"/>
         <image name="signature" width="259" height="137"/>
     </resources>

@@ -58,11 +58,11 @@
 }
 
 - (void)nextButtonTap {
-    if (_didOpenFromMoreScreen) {
-        //Go back to more screen
-        [self.navigationController popViewControllerAnimated:YES];
-        return;
-    }
+//    if (_didOpenFromMoreScreen) {
+//        //Go back to more screen
+//        [self.navigationController popViewControllerAnimated:YES];
+//        return;
+//    }
     
     if(self.isFirstTutorial)
     {
@@ -70,10 +70,13 @@
     }
     else
     {
-        [[UserManager sharedManager] showSignupViewController];
+//        //Open signup screen
+//        [[UserManager sharedManager] showSignupViewController];
+//        
+//        [UserDefaults setBool:NO forKey:kIsTutorialShownBefore];
+//        [UserDefaults synchronize];
         
-        [UserDefaults setBool:NO forKey:kIsTutorialShownBefore];
-        [UserDefaults synchronize];
+        [[UserManager sharedManager] openTabBar];
     }
 }
 
@@ -178,7 +181,7 @@
                             [UIImage imageNamed:@"tutorial_9"],
                             [UIImage imageNamed:@"tutorial_10"],
                             [UIImage imageNamed:@"tutorial_11"],
-                            [UIImage imageNamed:@"tutorial_last"]];
+                            [UIImage imageNamed:@"tutorial_11"]];
     }
     else
     {
@@ -244,7 +247,7 @@
     
     childViewController.index = index;
     childViewController.didOpenFromMoreScreen = _didOpenFromMoreScreen;
-    
+    childViewController.isFirstTutorial = _isFirstTutorial;
     
 //    id<GAITracker> tracker1 = [[GAI sharedInstance] defaultTracker];
 //    [tracker1 set:kGAIScreenName value:@"Stopwatch"];

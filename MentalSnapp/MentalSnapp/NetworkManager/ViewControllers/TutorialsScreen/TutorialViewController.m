@@ -17,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *tapToRecordButton;
 @property (weak, nonatomic) IBOutlet UIButton *tapToSignupButton;
 @property (weak, nonatomic) IBOutlet UIImageView *signatureImageView;
+@property (weak, nonatomic) IBOutlet UIButton *recordImageButton;
+@property (weak, nonatomic) IBOutlet UILabel *enjoylabel;
 
 @end
 
@@ -63,19 +65,23 @@
         
         _tapToRecordButton.hidden = _tapToSignupButton.hidden = _signatureImageView.hidden = YES;
         _titleLabel.hidden = _descriptionTextView.hidden = NO;
+        _enjoylabel.hidden = YES;
     } else {
         _tapToRecordButton.hidden = _tapToSignupButton.hidden = _signatureImageView.hidden = NO;
         _titleLabel.hidden = _descriptionTextView.hidden = YES;
+        _enjoylabel.hidden = NO;
         
         if (_didOpenFromMoreScreen) {
-            [_tapToRecordButton setTitle:@"Go on, give it a try!" forState:UIControlStateNormal];
-            [_tapToRecordButton.titleLabel setFont:[UIFont fontWithName:@"Roboto-Medium" size:15.f]];
-            _tapToSignupButton.hidden = YES;
+//            [_tapToRecordButton setTitle:@"Go on, give it a try!" forState:UIControlStateNormal];
+//            [_tapToRecordButton.titleLabel setFont:[UIFont fontWithName:@"Roboto-Medium" size:15.f]];
+//            _tapToSignupButton.hidden = YES;
         } else {
-            [_tapToRecordButton setTitle:@"Tap here for our guide to recording your first video" forState:UIControlStateNormal];
-            _tapToSignupButton.hidden = NO;
+//            [_tapToRecordButton setTitle:@"Tap here for our guide to recording your first video" forState:UIControlStateNormal];
+//            _tapToSignupButton.hidden = NO;
         }
     }
+    
+    _recordImageButton.hidden = _isFirstTutorial;
 }
 
 - (IBAction)tapToRecordButton:(id)sender {
@@ -85,7 +91,7 @@
 }
 
 - (IBAction)tapToSignupButton:(id)sender {
-    [[UserManager sharedManager] showSignupViewController];
+    [[UserManager sharedManager] openTabBar];
 }
 
 @end

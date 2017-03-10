@@ -288,7 +288,9 @@
         {
             [[UserManager sharedManager] updateProfileURL:profilePicURL];
             self.userImage = nil;
-            [self backButtonTapped];
+            if (_didOpenFromMoreScreen) {
+                [self backButtonTapped];
+            }
             [Banner showSuccessBannerWithSubtitle:LocalizedString(@"UserUpdationMessage")];
             
             [[UserManager sharedManager] sendAnalyticsForGenderAndDOBforUser:user];
