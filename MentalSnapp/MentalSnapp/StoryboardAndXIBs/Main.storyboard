@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="evG-dm-COo">
-    <device id="retina4_0" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -33,11 +30,11 @@
                         <viewControllerLayoutGuide type="bottom" id="4Ga-7l-Qhn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kOI-UW-fAA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your email address below and we'll send you your password." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5m-OZ-x8x">
-                                <rect key="frame" x="50" y="79" width="220" height="30.5"/>
+                                <rect key="frame" x="190" y="79" width="220" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="VQf-nS-gBA"/>
                                 </constraints>
@@ -46,10 +43,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Dk-dQ-Ntv" userLabel="EmailView">
-                                <rect key="frame" x="0.0" y="139.5" width="320" height="67"/>
+                                <rect key="frame" x="0.0" y="140" width="600" height="67"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVa-C5-YmA">
-                                        <rect key="frame" x="42" y="12" width="173" height="21"/>
+                                        <rect key="frame" x="42" y="12" width="453" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="7Ed-NL-2Qp"/>
                                         </constraints>
@@ -58,7 +55,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MgL-XM-0Zu">
-                                        <rect key="frame" x="42" y="33" width="236" height="26"/>
+                                        <rect key="frame" x="42" y="33" width="516" height="26"/>
                                         <color key="tintColor" red="0.05086936064" green="0.64109499349999999" blue="0.73025193249999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="BdC-O6-w9o"/>
@@ -71,7 +68,7 @@
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHt-VA-3gM" userLabel="Border">
-                                        <rect key="frame" x="42" y="64" width="236" height="1"/>
+                                        <rect key="frame" x="42" y="64" width="516" height="1"/>
                                         <color key="backgroundColor" red="0.74509803919999995" green="0.74509803919999995" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="Vrc-9X-d5O"/>
@@ -97,7 +94,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkY-C3-WnV" userLabel="Login">
-                                <rect key="frame" x="33" y="256.5" width="254" height="40"/>
+                                <rect key="frame" x="33" y="257" width="534" height="40"/>
                                 <color key="backgroundColor" red="0.91372549020000005" green="0.39607843139999999" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="3Fq-gw-pIe"/>
@@ -148,17 +145,17 @@
                         <viewControllerLayoutGuide type="bottom" id="269-Db-26B"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6vG-m0-OQi">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainLogo" translatesAutoresizingMaskIntoConstraints="NO" id="acv-bn-27g">
-                                <rect key="frame" x="69" y="55" width="183" height="65"/>
+                                <rect key="frame" x="209" y="55" width="183" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="zei-y0-u6i"/>
                                 </constraints>
                             </imageView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Esa-zq-KOA" userLabel="TitleLineLabel">
-                                <rect key="frame" x="69" y="122" width="183" height="0.0"/>
+                                <rect key="frame" x="209" y="122" width="183" height="0.0"/>
                                 <constraints>
                                     <constraint firstAttribute="height" id="cf0-XP-F29"/>
                                 </constraints>
@@ -202,13 +199,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oPv-PS-qMD">
-                                <rect key="frame" x="0.0" y="137" width="320" height="431"/>
+                                <rect key="frame" x="0.0" y="137" width="600" height="463"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gSP-Cz-GE4">
-                                        <rect key="frame" x="0.0" y="1" width="320" height="429"/>
+                                        <rect key="frame" x="0.0" y="1" width="600" height="461"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sdu-hs-z7Y">
-                                                <rect key="frame" x="10" y="0.0" width="300" height="61"/>
+                                                <rect key="frame" x="10" y="0.0" width="580" height="61"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="61" id="dQL-4I-bsx"/>
                                                 </constraints>
@@ -221,7 +218,7 @@ Try it for yourself - record your own story.</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhM-js-HTl">
-                                                <rect key="frame" x="33" y="86" width="254" height="40"/>
+                                                <rect key="frame" x="173" y="86" width="254" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="WVF-Mq-obj"/>
                                                     <constraint firstAttribute="width" constant="254" id="zGU-06-CVV"/>
@@ -246,10 +243,10 @@ Try it for yourself - record your own story.</string>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZW4-Bn-RAq">
-                                                <rect key="frame" x="0.0" y="151" width="320" height="30"/>
+                                                <rect key="frame" x="0.0" y="151" width="600" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3HQ-tt-eEH">
-                                                        <rect key="frame" x="15" y="15" width="122" height="1"/>
+                                                        <rect key="frame" x="15" y="15" width="262" height="1"/>
                                                         <color key="backgroundColor" red="0.64583686840120658" green="0.64583686840120658" blue="0.64583686840120658" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="YTa-iP-3zp"/>
@@ -259,7 +256,7 @@ Try it for yourself - record your own story.</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDa-Yp-U9m">
-                                                        <rect key="frame" x="183" y="15" width="122" height="1"/>
+                                                        <rect key="frame" x="323" y="15" width="262" height="1"/>
                                                         <color key="backgroundColor" red="0.64583686840120658" green="0.64583686840120658" blue="0.64583686840120658" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="Nhh-eQ-sCb"/>
@@ -269,7 +266,7 @@ Try it for yourself - record your own story.</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="orImage" translatesAutoresizingMaskIntoConstraints="NO" id="3Rx-mY-YyI">
-                                                        <rect key="frame" x="145" y="-1" width="30" height="31"/>
+                                                        <rect key="frame" x="285" y="-1" width="30" height="31"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="31" id="VjF-mv-WFc"/>
                                                             <constraint firstAttribute="width" constant="30" id="jfB-XJ-GUt"/>
@@ -291,7 +288,7 @@ Try it for yourself - record your own story.</string>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvD-RD-n8l">
-                                                <rect key="frame" x="35" y="201" width="250" height="14"/>
+                                                <rect key="frame" x="35" y="201" width="530" height="14"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="14" id="9Cg-b9-n6n"/>
                                                 </constraints>
@@ -300,7 +297,7 @@ Try it for yourself - record your own story.</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MLs-bD-VAG">
-                                                <rect key="frame" x="35" y="215" width="250" height="33"/>
+                                                <rect key="frame" x="35" y="215" width="530" height="33"/>
                                                 <color key="tintColor" red="0.05086936064" green="0.64109499349999999" blue="0.73025193249999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="33" id="2b9-jn-yho"/>
@@ -313,14 +310,14 @@ Try it for yourself - record your own story.</string>
                                                 </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zf2-0B-Cj6" userLabel="TextFieldUnderlineView">
-                                                <rect key="frame" x="35" y="248" width="250" height="1"/>
+                                                <rect key="frame" x="35" y="248" width="530" height="1"/>
                                                 <color key="backgroundColor" red="0.58039215690000001" green="0.58039215690000001" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="gWV-5u-I7h"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6i9-26-scK">
-                                                <rect key="frame" x="35" y="272" width="250" height="14"/>
+                                                <rect key="frame" x="35" y="272" width="530" height="14"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="14" id="zp4-E2-k5c"/>
                                                 </constraints>
@@ -329,10 +326,10 @@ Try it for yourself - record your own story.</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ujz-dU-Ep7" userLabel="Password View">
-                                                <rect key="frame" x="35" y="286" width="250" height="33"/>
+                                                <rect key="frame" x="35" y="286" width="530" height="33"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="spR-9C-EbN">
-                                                        <rect key="frame" x="0.0" y="0.0" width="250" height="33"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="530" height="33"/>
                                                         <color key="tintColor" red="0.05086936064" green="0.64109499349999999" blue="0.73025193249999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="textColor" red="0.23921568630000001" green="0.23921568630000001" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="15"/>
@@ -342,7 +339,7 @@ Try it for yourself - record your own story.</string>
                                                         </connections>
                                                     </textField>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rm2-0O-Pg8" userLabel="TextFieldUnderlineView">
-                                                        <rect key="frame" x="0.0" y="32" width="250" height="1"/>
+                                                        <rect key="frame" x="0.0" y="32" width="530" height="1"/>
                                                         <color key="backgroundColor" red="0.58039215686274503" green="0.58039215686274503" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="XpQ-K5-fS3"/>
@@ -360,7 +357,7 @@ Try it for yourself - record your own story.</string>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ETv-hJ-QYz" userLabel="ForgotPassButton">
-                                                <rect key="frame" x="181" y="330" width="104" height="21"/>
+                                                <rect key="frame" x="458" y="330" width="107" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="pCi-Ma-n75"/>
                                                 </constraints>
@@ -389,7 +386,7 @@ Try it for yourself - record your own story.</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fww-a6-6m4" userLabel="Login">
-                                                <rect key="frame" x="33" y="372" width="254" height="40"/>
+                                                <rect key="frame" x="173" y="404" width="254" height="40"/>
                                                 <color key="backgroundColor" red="0.91372549020000005" green="0.39607843139999999" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="254" id="Bzo-fQ-HCI"/>
@@ -410,16 +407,16 @@ Try it for yourself - record your own story.</string>
                                                 </connections>
                                             </button>
                                             <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Z5-HP-fNx" userLabel="Bottom View">
-                                                <rect key="frame" x="68" y="417" width="185.5" height="0.0"/>
+                                                <rect key="frame" x="204" y="449" width="193" height="0.0"/>
                                                 <subviews>
                                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dv3-Lh-7vu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="131.5" height="0.0"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="139" height="0.0"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="13"/>
                                                         <color key="textColor" red="0.23921568630000001" green="0.23921568630000001" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83Z-0P-B8U">
-                                                        <rect key="frame" x="131.5" y="0.0" width="54" height="0.0"/>
+                                                        <rect key="frame" x="139" y="0.0" width="54" height="0.0"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="54" id="NT9-hh-Sws"/>
                                                         </constraints>
@@ -532,11 +529,11 @@ Try it for yourself - record your own story.</string>
                         <viewControllerLayoutGuide type="bottom" id="Uvc-ro-i9L"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="10G-kG-bNw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTF-5z-EFb">
-                                <rect key="frame" x="60" y="509" width="200" height="39"/>
+                                <rect key="frame" x="200" y="541" width="200" height="39"/>
                                 <color key="backgroundColor" red="0.91372549020000005" green="0.39607843139999999" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="6ko-jT-b3b"/>
@@ -554,10 +551,10 @@ Try it for yourself - record your own story.</string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dku-jQ-lmu">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mental Snapp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLN-9k-qy7">
-                                        <rect key="frame" x="100" y="28" width="120" height="21"/>
+                                        <rect key="frame" x="240" y="28" width="120" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="8J8-uW-PXA"/>
                                             <constraint firstAttribute="height" constant="21" id="oco-w1-8WX"/>
@@ -575,19 +572,19 @@ Try it for yourself - record your own story.</string>
                                 </constraints>
                             </view>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="banner_img" translatesAutoresizingMaskIntoConstraints="NO" id="6Fl-BL-aDv">
-                                <rect key="frame" x="0.0" y="63" width="320" height="136"/>
+                                <rect key="frame" x="0.0" y="63" width="600" height="136"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="136" id="PDL-Ld-JaC"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nx0-lh-QdS">
-                                <rect key="frame" x="0.0" y="207" width="320" height="294"/>
+                                <rect key="frame" x="0.0" y="207" width="600" height="326"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="etm-1v-TP3">
-                                        <rect key="frame" x="160" y="147" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="300" y="163" width="0.0" height="0.0"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nH2-jg-LUm">
-                                                <rect key="frame" x="-62.5" y="-11" width="125.5" height="23"/>
+                                                <rect key="frame" x="-63" y="-11" width="126" height="23"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="19"/>
                                                 <color key="textColor" red="0.058823529409999999" green="0.68627450980000004" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -690,14 +687,14 @@ Try it for yourself - record your own story.</string>
                         <viewControllerLayoutGuide type="bottom" id="izO-kU-XbZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rBX-Fj-WGJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rk6-7z-3lE" userLabel="Top Header View">
-                                <rect key="frame" x="0.0" y="64" width="320" height="40"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="40"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LL0-YH-3ra">
-                                        <rect key="frame" x="40" y="5" width="153" height="30"/>
+                                        <rect key="frame" x="40" y="5" width="433" height="30"/>
                                         <color key="tintColor" red="0.058823529409999999" green="0.68627450980000004" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" red="0.23921568630000001" green="0.23921568630000001" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
@@ -718,7 +715,7 @@ Try it for yourself - record your own story.</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITE-Mn-F5k" userLabel="Filter Button">
-                                        <rect key="frame" x="273" y="0.0" width="40" height="40"/>
+                                        <rect key="frame" x="553" y="0.0" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="6Vz-cM-eq9"/>
                                             <constraint firstAttribute="height" constant="40" id="um9-W1-IMx"/>
@@ -730,7 +727,7 @@ Try it for yourself - record your own story.</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhx-te-eSk" userLabel="Cancel Button">
-                                        <rect key="frame" x="193" y="0.0" width="40" height="40"/>
+                                        <rect key="frame" x="473" y="0.0" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="MTF-q3-HkZ"/>
                                             <constraint firstAttribute="height" constant="40" id="Pgw-bx-CBL"/>
@@ -746,7 +743,7 @@ Try it for yourself - record your own story.</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NY-dd-RxY" userLabel="Calendar Button">
-                                        <rect key="frame" x="233" y="0.0" width="40" height="40"/>
+                                        <rect key="frame" x="513" y="0.0" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="0ju-QK-yL6"/>
                                             <constraint firstAttribute="height" constant="40" id="8bs-gm-3GC"/>
@@ -775,10 +772,10 @@ Try it for yourself - record your own story.</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZC-uO-hqh" userLabel="No Content View">
-                                <rect key="frame" x="0.0" y="234" width="320" height="100"/>
+                                <rect key="frame" x="0.0" y="250" width="600" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Videos to display" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVy-ys-l24">
-                                        <rect key="frame" x="0.0" y="32" width="320" height="20"/>
+                                        <rect key="frame" x="0.0" y="32" width="600" height="20"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -794,21 +791,21 @@ Try it for yourself - record your own story.</string>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lH8-Rt-juu">
-                                <rect key="frame" x="0.0" y="104" width="320" height="464"/>
+                                <rect key="frame" x="0.0" y="104" width="600" height="496"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoTableViewCell" rowHeight="400" id="NK5-z8-BIQ" customClass="VideoTableViewCell">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="400"/>
+                                        <rect key="frame" x="0.0" y="28" width="600" height="400"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NK5-z8-BIQ" id="e0L-1f-Q4G">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="399"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="399"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xft-8H-nLy" userLabel="Description View">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJm-ec-1bu" userLabel="Description Label">
-                                                            <rect key="frame" x="30" y="14" width="280" height="21"/>
+                                                            <rect key="frame" x="30" y="14" width="560" height="21"/>
                                                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
                                                             <color key="textColor" red="0.23921568627450979" green="0.23921568627450979" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -832,13 +829,13 @@ Try it for yourself - record your own story.</string>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="auP-6t-gfh" userLabel="Video Container View">
-                                                    <rect key="frame" x="0.0" y="49" width="320" height="350"/>
+                                                    <rect key="frame" x="0.0" y="49" width="600" height="350"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="JFJ-ZD-epa" userLabel="Video Image View">
-                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="600" height="350"/>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLM-9i-AvB" userLabel="Play Button">
-                                                            <rect key="frame" x="110" y="125" width="100" height="100"/>
+                                                            <rect key="frame" x="250" y="125" width="100" height="100"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="100" id="OpT-vA-ysM"/>
                                                                 <constraint firstAttribute="height" constant="100" id="bSt-R3-E8X"/>
@@ -849,7 +846,7 @@ Try it for yourself - record your own story.</string>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LfR-PR-cja" userLabel="Download Button">
-                                                            <rect key="frame" x="230" y="0.0" width="40" height="50"/>
+                                                            <rect key="frame" x="510" y="0.0" width="40" height="50"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="40" id="aF1-gy-ViH"/>
                                                                 <constraint firstAttribute="height" constant="50" id="b4e-QU-Qhg"/>
@@ -860,7 +857,7 @@ Try it for yourself - record your own story.</string>
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5K-63-52l">
-                                                            <rect key="frame" x="107" y="327" width="201" height="14"/>
+                                                            <rect key="frame" x="387" y="327" width="201" height="14"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="201" id="56x-jq-u3C"/>
                                                                 <constraint firstAttribute="height" constant="14" id="JBz-nK-GMw"/>
@@ -870,7 +867,7 @@ Try it for yourself - record your own story.</string>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGf-lp-BBr" userLabel="Delete Button">
-                                                            <rect key="frame" x="270" y="0.0" width="40" height="50"/>
+                                                            <rect key="frame" x="550" y="0.0" width="40" height="50"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="1dU-TT-3u4"/>
                                                                 <constraint firstAttribute="width" constant="40" id="l21-Jn-353"/>
@@ -965,20 +962,20 @@ Try it for yourself - record your own story.</string>
                         <viewControllerLayoutGuide type="bottom" id="i7L-9X-vfQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XTm-Nq-SFf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l3x-l4-g3s">
-                                <rect key="frame" x="20" y="194" width="280" height="180"/>
+                                <rect key="frame" x="20" y="210" width="560" height="180"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgC-X1-qzL">
-                                        <rect key="frame" x="0.0" y="5" width="280" height="32"/>
+                                        <rect key="frame" x="0.0" y="5" width="560" height="32"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="19"/>
                                         <color key="textColor" red="0.4039215686" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcp-Zq-IPR">
-                                        <rect key="frame" x="90" y="180" width="100" height="0.0"/>
+                                        <rect key="frame" x="230" y="180" width="100" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="G8R-yB-Mre"/>
                                             <constraint firstAttribute="height" id="GA6-jp-ukT"/>
@@ -990,7 +987,7 @@ Try it for yourself - record your own story.</string>
                                         </connections>
                                     </button>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record Now" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6DR-Gq-rgz">
-                                        <rect key="frame" x="90" y="161" width="100" height="19"/>
+                                        <rect key="frame" x="230" y="161" width="100" height="19"/>
                                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
                                         <color key="textColor" red="0.058823529411764705" green="0.68627450980392157" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1037,14 +1034,14 @@ Try it for yourself - record your own story.</string>
                         <viewControllerLayoutGuide type="bottom" id="hUl-7d-CEJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lmb-WM-kJS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ejG-H8-DCy" userLabel="No Content View">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Stats to show" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2d-kf-kpw">
-                                        <rect key="frame" x="0.0" y="274" width="320" height="20"/>
+                                        <rect key="frame" x="0.0" y="290" width="600" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="uUl-Du-63t"/>
                                         </constraints>
@@ -1062,7 +1059,7 @@ Try it for yourself - record your own story.</string>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RRR-sQ-bX6">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="520"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="552"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="0qT-1c-QuX" id="QUG-q8-rWI"/>
@@ -1101,18 +1098,18 @@ Try it for yourself - record your own story.</string>
                         <viewControllerLayoutGuide type="bottom" id="58I-lG-AYu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aGa-Iv-xqL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jwR-SG-U8A">
-                                <rect key="frame" x="0.0" y="64" width="320" height="405"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="437"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MoreScreenTableViewCellIdentifier" rowHeight="44" id="kF5-0v-ZKn" customClass="MoreTableViewCell">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kF5-0v-ZKn" id="bej-D8-x61">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xIS-9F-UEv" userLabel="ImageContainerView">
@@ -1132,20 +1129,20 @@ Try it for yourself - record your own story.</string>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDY-Jf-S1O">
-                                                    <rect key="frame" x="56" y="0.0" width="221" height="43"/>
+                                                    <rect key="frame" x="56" y="0.0" width="501" height="43"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11z-Xu-gTg">
-                                                    <rect key="frame" x="277" y="0.0" width="29" height="44"/>
+                                                    <rect key="frame" x="557" y="0.0" width="29" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="11z-Xu-gTg" secondAttribute="height" multiplier="2:3" id="N2e-cL-EfC"/>
                                                     </constraints>
                                                     <state key="normal" image="MoreRightArrow"/>
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zFI-QQ-1eJ" userLabel="SeparatorView">
-                                                    <rect key="frame" x="56" y="43" width="264" height="1"/>
+                                                    <rect key="frame" x="56" y="43" width="544" height="1"/>
                                                     <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="Qzy-Wm-V6Y"/>
@@ -1180,7 +1177,7 @@ Try it for yourself - record your own story.</string>
                                 </connections>
                             </tableView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsC-YM-trH">
-                                <rect key="frame" x="0.0" y="469" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="501" width="600" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="15"/>
                                 <state key="normal" title=" Terms and conditions">
@@ -1192,7 +1189,7 @@ Try it for yourself - record your own story.</string>
                                 </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F6C-f1-NsH">
-                                <rect key="frame" x="91" y="501" width="142" height="1"/>
+                                <rect key="frame" x="231" y="533" width="142" height="1"/>
                                 <color key="backgroundColor" red="0.91372549020000005" green="0.39607843139999999" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="142" id="1Fa-s0-mYu"/>
@@ -1236,7 +1233,7 @@ Try it for yourself - record your own story.</string>
                         <viewControllerLayoutGuide type="bottom" id="tOv-SJ-NUQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DKF-8z-YdM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1254,14 +1251,14 @@ Try it for yourself - record your own story.</string>
                         <viewControllerLayoutGuide type="bottom" id="fgH-yH-as3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="e89-bX-UAi">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dlO-pD-MXn" userLabel="No Content View">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Queued Exercises to display" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkG-JK-tZe" userLabel="No Queued Excercises to display">
-                                        <rect key="frame" x="0.0" y="274" width="320" height="20"/>
+                                        <rect key="frame" x="0.0" y="290" width="600" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="fJ8-mI-E0B"/>
                                         </constraints>
@@ -1279,14 +1276,14 @@ Try it for yourself - record your own story.</string>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vkp-M8-qHC">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="QueuedExercisesTableViewCell" rowHeight="81" id="Qls-U3-AFd" customClass="QueuedExercisesTableViewCell">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="81"/>
+                                        <rect key="frame" x="0.0" y="28" width="600" height="81"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qls-U3-AFd" id="Po7-bZ-wxL">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGe-za-dLf">
@@ -1304,7 +1301,7 @@ Try it for yourself - record your own story.</string>
                                                     </userDefinedRuntimeAttributes>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fM-6G-cc6">
-                                                    <rect key="frame" x="72" y="16" width="168" height="21"/>
+                                                    <rect key="frame" x="72" y="16" width="448" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="0ak-OY-bRy"/>
                                                     </constraints>
@@ -1313,7 +1310,7 @@ Try it for yourself - record your own story.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwL-Gd-LVZ">
-                                                    <rect key="frame" x="72" y="41" width="168" height="23"/>
+                                                    <rect key="frame" x="72" y="41" width="448" height="23"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="23" id="OBW-tG-QDj"/>
                                                     </constraints>
@@ -1322,7 +1319,7 @@ Try it for yourself - record your own story.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tomorrow 11:12 am" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3a-CI-1uI" userLabel="Schedule time Label">
-                                                    <rect key="frame" x="240" y="16" width="70" height="30.5"/>
+                                                    <rect key="frame" x="520" y="16" width="70" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="0WY-Pf-yhu"/>
                                                         <constraint firstAttribute="width" constant="70" id="uZs-2k-bdj"/>
@@ -2102,16 +2099,16 @@ Try it for yourself - record your own story.</string>
                                                                 </connections>
                                                             </button>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kaG-It-J2d" userLabel="Bottom View">
-                                                                <rect key="frame" x="88" y="103" width="199" height="25"/>
+                                                                <rect key="frame" x="85" y="103" width="205" height="25"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPU-Y4-Hyr">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="145" height="25"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="151" height="25"/>
                                                                         <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="13"/>
                                                                         <color key="textColor" red="0.23921568630000001" green="0.23921568630000001" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NYK-RA-bl0">
-                                                                        <rect key="frame" x="145" y="0.0" width="54" height="25"/>
+                                                                        <rect key="frame" x="151" y="0.0" width="54" height="25"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="54" id="HoQ-QI-YSn"/>
                                                                         </constraints>
@@ -2136,7 +2133,7 @@ Try it for yourself - record your own story.</string>
                                                                 </constraints>
                                                             </view>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQe-N9-AE2">
-                                                                <rect key="frame" x="76" y="138" width="223" height="30"/>
+                                                                <rect key="frame" x="77" y="138" width="221" height="30"/>
                                                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
                                                                 <state key="normal" title="feedback@mentalsnapp.com">
                                                                     <color key="titleColor" red="0.058823529409999999" green="0.68627450980000004" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -2159,7 +2156,7 @@ Try it for yourself - record your own story.</string>
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ry6-VA-hKh">
-                                                        <rect key="frame" x="147" y="586" width="127" height="30"/>
+                                                        <rect key="frame" x="147" y="586" width="129" height="30"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="13"/>
                                                         <state key="normal" title=" Terms and conditions">
                                                             <color key="titleColor" red="0.91372549020000005" green="0.39607843139999999" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
@@ -2317,11 +2314,11 @@ Try it for yourself - record your own story.</string>
                         <viewControllerLayoutGuide type="bottom" id="zts-fT-8Ih"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AEA-l2-fRg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your new password received in the email." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKk-xx-VAx">
-                                <rect key="frame" x="85" y="79" width="150" height="30.5"/>
+                                <rect key="frame" x="225" y="79" width="150" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="KK8-gD-CHP"/>
                                 </constraints>
@@ -2330,10 +2327,10 @@ Try it for yourself - record your own story.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wm6-rG-GiQ" userLabel="EmailView">
-                                <rect key="frame" x="0.0" y="139.5" width="320" height="67"/>
+                                <rect key="frame" x="0.0" y="140" width="600" height="67"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igf-aG-PLD">
-                                        <rect key="frame" x="42" y="12" width="173" height="21"/>
+                                        <rect key="frame" x="42" y="12" width="453" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="LVq-Df-jT7"/>
                                         </constraints>
@@ -2342,7 +2339,7 @@ Try it for yourself - record your own story.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jL4-Rl-h6M">
-                                        <rect key="frame" x="42" y="33" width="236" height="26"/>
+                                        <rect key="frame" x="42" y="33" width="516" height="26"/>
                                         <color key="tintColor" red="0.05086936064" green="0.64109499349999999" blue="0.73025193249999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="Y4i-mw-R4n"/>
@@ -2352,7 +2349,7 @@ Try it for yourself - record your own story.</string>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" secureTextEntry="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhG-eq-Rm7" userLabel="Border">
-                                        <rect key="frame" x="42" y="64" width="236" height="1"/>
+                                        <rect key="frame" x="42" y="64" width="516" height="1"/>
                                         <color key="backgroundColor" red="0.74509803919999995" green="0.74509803919999995" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="Lrd-tn-pk9"/>
@@ -2378,10 +2375,10 @@ Try it for yourself - record your own story.</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w06-E3-LRm" userLabel="EmailView">
-                                <rect key="frame" x="0.0" y="206.5" width="320" height="67"/>
+                                <rect key="frame" x="0.0" y="207" width="600" height="67"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RE-ENTER PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6e-gK-Hlr">
-                                        <rect key="frame" x="42" y="12" width="173" height="21"/>
+                                        <rect key="frame" x="42" y="12" width="453" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="V02-0z-Ujv"/>
                                         </constraints>
@@ -2390,7 +2387,7 @@ Try it for yourself - record your own story.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Re-enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3w3-dq-D75">
-                                        <rect key="frame" x="42" y="33" width="236" height="26"/>
+                                        <rect key="frame" x="42" y="33" width="516" height="26"/>
                                         <color key="tintColor" red="0.05086936064" green="0.64109499349999999" blue="0.73025193249999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="Qgd-Ux-RSA"/>
@@ -2400,7 +2397,7 @@ Try it for yourself - record your own story.</string>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" secureTextEntry="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZwG-YM-uxy" userLabel="Border">
-                                        <rect key="frame" x="42" y="64" width="236" height="1"/>
+                                        <rect key="frame" x="42" y="64" width="516" height="1"/>
                                         <color key="backgroundColor" red="0.74509803919999995" green="0.74509803919999995" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="vpM-ZT-PP3"/>
@@ -2426,7 +2423,7 @@ Try it for yourself - record your own story.</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIJ-y9-TCN" userLabel="Login">
-                                <rect key="frame" x="33" y="323.5" width="254" height="40"/>
+                                <rect key="frame" x="33" y="324" width="534" height="40"/>
                                 <color key="backgroundColor" red="0.91372549020000005" green="0.39607843139999999" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="NTq-41-h9l"/>

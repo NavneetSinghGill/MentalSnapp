@@ -16,7 +16,7 @@
                                                                   @"phoneNumber": @"phone_number",
                                                                   @"gender": @"gender",
                                                                   @"userId": @"id",
-//                                                                  @"userName": @"name",
+                                                                  @"userName": @"name",
                                                                   @"firstName": @"first_name",
                                                                   @"lastName" : @"last_name",
                                                                   @"dateOfBirth" : @"date_of_birth",
