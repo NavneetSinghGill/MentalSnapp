@@ -56,7 +56,8 @@
 "LoginScreenPasswordMessage" = "Enter password";
 
 //Signup screen:
-"SignupScreenNameMessage" = "Please enter name.";
+"SignupScreenFirstNameMessage" = "Please enter firstName.";
+"SignupScreenLastNameMessage" = "Please enter lastName.";
 "SignupScreenEmailMessage" = "Please enter email.";
 "SignupScreenValidEmailMessage" = "Please enter valid email.";
 "SignupScreenPhoneMessage" = "Please enter phone.";

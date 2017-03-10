@@ -195,7 +195,7 @@
     if(self.user){
         profilePicURL = self.user.profilePicURL;
         selectedGender = ([self.user.gender caseInsensitiveCompare:@"female"]==NSOrderedSame)?1:(([self.user.gender caseInsensitiveCompare:@"other"]==NSOrderedSame)?2:(([self.user.gender isEqualToString:@""])?3:0));
-        [self.userNameLabel setText:self.user.userName];
+        [self.userNameLabel setText:[NSString stringWithFormat:@"%@ %@",self.user.firstName, self.user.lastName]];
         [self.emailTextFeild setText:self.user.email];
         NSMutableString *phoneNumber = [NSMutableString stringWithString:self.user.phoneNumber] ;
         if(phoneNumber.length>0){
@@ -281,7 +281,7 @@
     phoneNumber = [phoneNumber stringByReplacingOccurrencesOfString:@"+44" withString:@""];
     phoneNumber = [phoneNumber stringByReplacingOccurrencesOfString:@" " withString:@""];
     NSString *dateOfBirth= (([[self.dateOfBirthButton titleForState:UIControlStateNormal] isEqualToString:@"Enter your date of birth"])?@"":[self.dateOfBirthButton titleForState:UIControlStateNormal]);
-    UserModel *user = [[UserModel alloc] initWithUserId:self.user.userId andEmail:self.emailTextFeild.text andUserName:self.user.userName andPhone:phoneNumber andGender:[NSString stringWithFormat:@"%@",(selectedGender == MaleGender)?@"male":((selectedGender == FemaleGender)?@"female":((selectedGender == OtherGender)?@"other":@""))] andDateOfBirth:dateOfBirth andProfilePic:profilePicURL];
+    UserModel *user = [[UserModel alloc] initWithUserId:self.user.userId andEmail:self.emailTextFeild.text andfirstName:self.user.firstName andlastName:self.user.lastName andPhone:phoneNumber andGender:[NSString stringWithFormat:@"%@",(selectedGender == MaleGender)?@"male":((selectedGender == FemaleGender)?@"female":((selectedGender == OtherGender)?@"other":@""))] andDateOfBirth:dateOfBirth andProfilePic:profilePicURL];
     
     [[RequestManager alloc] editUserWithUserModel:user withCompletionBlock:^(BOOL success, id response) {
         if(success)

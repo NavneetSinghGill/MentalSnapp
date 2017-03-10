@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSString *userName = [UserManager sharedManager].userModel.userName;
+    NSString *userName = [NSString stringWithFormat:@"%@ %@",[UserManager sharedManager].userModel.firstName, [UserManager sharedManager].userModel.lastName];
     _welcomeBackLabel.text = [NSString stringWithFormat:@"Welcome back \n%@, \nwhat do you want to record today?",userName];
     
     UIFont *boldFont = [UIFont fontWithName:@"Roboto-Bold" size:22.0f];

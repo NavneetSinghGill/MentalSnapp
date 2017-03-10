@@ -38,7 +38,8 @@ static dispatch_once_t userOnceToken;
     [UserDefaults setValue:_authorizationToken forKey:@"authorizationToken"];
     [UserDefaults setValue:_userModel.email forKey:@"email"];
     [UserDefaults setValue:_userModel.password forKey:@"password"];
-    [UserDefaults setValue:_userModel.userName forKey:@"name"];
+    [UserDefaults setValue:_userModel.firstName forKey:@"firstName"];
+    [UserDefaults setValue:_userModel.lastName forKey:@"lastName"];
     [UserDefaults setValue:_userModel.userId forKey:@"id"];
     [UserDefaults setValue:_userModel.profilePicURL forKey:@"profile_url"];
     [UserDefaults setValue:_userModel.dateOfBirth forKey:@"date_of_birth"];
@@ -51,7 +52,8 @@ static dispatch_once_t userOnceToken;
 {
     _authorizationToken = [UserDefaults valueForKey:@"authorizationToken"];
     _userModel.email = [UserDefaults valueForKey:@"email"];
-    _userModel.userName = [UserDefaults valueForKey:@"name"];
+    _userModel.firstName = [UserDefaults valueForKey:@"firstName"];
+    _userModel.lastName = [UserDefaults valueForKey:@"lastName"];
     _userModel.password = [UserDefaults valueForKey:@"password"];
     _userModel.dateOfBirth = [UserDefaults valueForKey:@"date_of_birth"];
     _userModel.phoneNumber = [UserDefaults valueForKey:@"phone_number"];
@@ -79,7 +81,7 @@ static dispatch_once_t userOnceToken;
 - (void)sendAnalyticsForGenderAndDOBforUser:(UserModel *)user {
     id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-92763376-1"];
     
-    NSString *category = [NSString stringWithFormat:@"%@_%@",user.userId, user.userName];
+    NSString *category = [NSString stringWithFormat:@"%@_%@_%@",user.userId, user.firstName,user.lastName];
     NSString *eventAction;
     NSString *label;
     

@@ -14,7 +14,8 @@
 
 @property (nonatomic, strong) UserModel *user;
 
-@property (strong, nonatomic) IBOutlet UITextField *nameTextFeild;
+@property (strong, nonatomic) IBOutlet UITextField *firstNameTextFeild;
+@property (strong, nonatomic) IBOutlet UITextField *lastNameTextFeild;
 @property (strong, nonatomic) IBOutlet UITextField *emailTextFeild;
 @property (strong, nonatomic) IBOutlet UITextField *phoneTextField;
 @property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
@@ -79,7 +80,7 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
     
-    if(![textField isEqual:self.nameTextFeild]){
+    if(![textField isEqual:self.firstNameTextFeild]){
         CGRect superRect = [textField convertRect:textField.frame toView:_containerView];
         [UIView animateWithDuration:0.3f animations:^{
             //This calculation ensures that the selected textField will be in the upper 3rd part of view
@@ -101,7 +102,9 @@
 
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    if ([textField isEqual:_nameTextFeild]) {
+    if ([textField isEqual:_firstNameTextFeild]) {
+        [_lastNameTextFeild becomeFirstResponder];
+    } else if ([textField isEqual:_lastNameTextFeild]) {
         [_emailTextFeild becomeFirstResponder];
     } else if ([textField isEqual:_emailTextFeild]) {
         [_phoneTextField becomeFirstResponder];
@@ -137,8 +140,12 @@
 }
 
 -(BOOL)isValidateFields {
-    if ([self.nameTextFeild.text.trim isEqualToString:@""]) {
+    if ([self.firstNameTextFeild.text.trim isEqualToString:@""]) {
         [Banner showFailureBannerOnTopWithTitle:@"Error" subtitle:LocalizedString(@"SignupScreenNameMessage")];
+        return NO;
+    }
+    if ([self.lastNameTextFeild.text.trim isEqualToString:@""]) {
+        [Banner showFailureBannerOnTopWithTitle:@"Error" subtitle:LocalizedString(@"SignupScreenLastNameMessage")];
         return NO;
     }
     if([self.emailTextFeild.text.trim isEqualToString:@""]) {
@@ -211,7 +218,8 @@
         phoneNumber = [phoneNumber stringByReplacingOccurrencesOfString:@"+44" withString:@""];
         phoneNumber = [phoneNumber stringByReplacingOccurrencesOfString:@" " withString:@""];
         UserModel *user = [UserModel new];
-        user.userName = self.nameTextFeild.text.trim;
+        user.firstName = self.firstNameTextFeild.text.trim;
+        user.lastName = self.lastNameTextFeild.text.trim;
         user.email = self.emailTextFeild.text.trim;
         user.phoneNumber = phoneNumber;
         user.dateOfBirth = ([self.dateOfBirthButton.titleLabel.text isEqualToString:@"Enter your date of birth"])?@"":self.dateOfBirthButton.titleLabel.text;

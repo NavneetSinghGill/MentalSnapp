@@ -87,7 +87,7 @@ void uncaughtExceptionHandler(NSException *exception) {
 //        [[UserManager sharedManager] showTutorialScreen:YES];
 //    }
     
-    [Crittercism setUsername:([UserDefaults boolForKey:kIsUserLoggedIn])?[UserManager sharedManager].userModel.userName:@""];
+    [Crittercism setUsername:([UserDefaults boolForKey:kIsUserLoggedIn])?[NSString stringWithFormat:@"%@ %@",[UserManager sharedManager].userModel.firstName, [UserManager sharedManager].userModel.lastName]:@""];
     
     return YES;
 }

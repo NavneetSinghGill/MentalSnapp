@@ -587,7 +587,7 @@ Try it for yourself - record your own story.</string>
                                         <rect key="frame" x="160" y="147" width="0.0" height="0.0"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nH2-jg-LUm">
-                                                <rect key="frame" x="-62" y="-11" width="124.5" height="23"/>
+                                                <rect key="frame" x="-62.5" y="-11" width="125.5" height="23"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="19"/>
                                                 <color key="textColor" red="0.058823529409999999" green="0.68627450980000004" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1573,15 +1573,15 @@ Try it for yourself - record your own story.</string>
                                 <rect key="frame" x="0.0" y="173" width="375" height="727"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SX9-Av-XQH" userLabel="ContainerView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="737"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="804"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LXD-SX-yFf">
-                                                <rect key="frame" x="0.0" y="-3" width="375" height="740"/>
+                                                <rect key="frame" x="0.0" y="-3" width="375" height="807"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d78-u6-djz" userLabel="NameView">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0m-FW-ckc">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FIRSTNAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0m-FW-ckc">
                                                                 <rect key="frame" x="42" y="12" width="228" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="mqK-dX-7Lh"/>
@@ -1590,7 +1590,7 @@ Try it for yourself - record your own story.</string>
                                                                 <color key="textColor" red="0.91372549020000005" green="0.39607843139999999" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CS9-gU-oIl">
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your firstname" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CS9-gU-oIl">
                                                                 <rect key="frame" x="42" y="33" width="291" height="26"/>
                                                                 <color key="tintColor" red="0.05086936064" green="0.64109499349999999" blue="0.73025193249999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
@@ -1629,8 +1629,59 @@ Try it for yourself - record your own story.</string>
                                                             <constraint firstItem="CS9-gU-oIl" firstAttribute="top" secondItem="s0m-FW-ckc" secondAttribute="bottom" id="ygo-4S-erI"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TDc-Wc-Ukc" userLabel="EmailView">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2o6-e9-zFk" userLabel="NameView">
                                                         <rect key="frame" x="0.0" y="67" width="375" height="67"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LASTNAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7H-hh-qUY">
+                                                                <rect key="frame" x="42" y="12" width="228" height="21"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="21" id="oF3-hH-a8Q"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="12"/>
+                                                                <color key="textColor" red="0.91372549020000005" green="0.39607843139999999" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your lastname" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FfI-Od-BtB">
+                                                                <rect key="frame" x="42" y="33" width="291" height="26"/>
+                                                                <color key="tintColor" red="0.05086936064" green="0.64109499349999999" blue="0.73025193249999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="26" id="epa-rY-0bx"/>
+                                                                </constraints>
+                                                                <color key="textColor" red="0.32549019610000002" green="0.32549019610000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="15"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="vX0-rh-xaN" id="Ck2-RO-dvV"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shw-3h-h3A" userLabel="Border">
+                                                                <rect key="frame" x="42" y="64" width="291" height="1"/>
+                                                                <color key="backgroundColor" red="0.74509803919999995" green="0.74509803919999995" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="1" id="XN3-1c-uAe"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstItem="shw-3h-h3A" firstAttribute="top" secondItem="FfI-Od-BtB" secondAttribute="bottom" constant="5" id="2CM-yh-e7k"/>
+                                                            <constraint firstItem="n7H-hh-qUY" firstAttribute="top" secondItem="2o6-e9-zFk" secondAttribute="top" constant="12" id="Hri-2v-Ho9"/>
+                                                            <constraint firstAttribute="trailing" secondItem="FfI-Od-BtB" secondAttribute="trailing" constant="42" id="NHz-ax-F2r"/>
+                                                            <constraint firstAttribute="trailing" secondItem="n7H-hh-qUY" secondAttribute="trailing" constant="105" id="Uue-ly-ndL"/>
+                                                            <constraint firstItem="FfI-Od-BtB" firstAttribute="top" secondItem="n7H-hh-qUY" secondAttribute="bottom" id="dFN-jJ-aCq"/>
+                                                            <constraint firstAttribute="trailing" secondItem="shw-3h-h3A" secondAttribute="trailing" constant="42" id="h2e-yl-gfH"/>
+                                                            <constraint firstItem="FfI-Od-BtB" firstAttribute="leading" secondItem="2o6-e9-zFk" secondAttribute="leading" constant="42" id="kKg-Fu-6jz"/>
+                                                            <constraint firstAttribute="height" constant="67" id="txk-5n-gJZ"/>
+                                                            <constraint firstAttribute="bottom" secondItem="shw-3h-h3A" secondAttribute="bottom" constant="2" id="wTO-y1-HnQ"/>
+                                                            <constraint firstItem="shw-3h-h3A" firstAttribute="leading" secondItem="2o6-e9-zFk" secondAttribute="leading" constant="42" id="wc2-C6-OJK"/>
+                                                            <constraint firstItem="n7H-hh-qUY" firstAttribute="leading" secondItem="2o6-e9-zFk" secondAttribute="leading" constant="42" id="xov-o8-Dra"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TDc-Wc-Ukc" userLabel="EmailView">
+                                                        <rect key="frame" x="0.0" y="134" width="375" height="67"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZZ-8T-iq4">
                                                                 <rect key="frame" x="42" y="12" width="228" height="21"/>
@@ -1681,7 +1732,7 @@ Try it for yourself - record your own story.</string>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktA-RM-39O" userLabel="PhoneView">
-                                                        <rect key="frame" x="0.0" y="134" width="375" height="77"/>
+                                                        <rect key="frame" x="0.0" y="201" width="375" height="77"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56H-g1-E0I">
                                                                 <rect key="frame" x="43" y="22" width="228" height="21"/>
@@ -1759,7 +1810,7 @@ Try it for yourself - record your own story.</string>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ejk-K4-LNK" userLabel="DateOfBirthView">
-                                                        <rect key="frame" x="0.0" y="211" width="375" height="77"/>
+                                                        <rect key="frame" x="0.0" y="278" width="375" height="77"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufB-4g-nKZ">
                                                                 <rect key="frame" x="42" y="22" width="224" height="21"/>
@@ -1823,7 +1874,7 @@ Try it for yourself - record your own story.</string>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wYt-xe-b6R" userLabel="GenderView">
-                                                        <rect key="frame" x="0.0" y="288" width="375" height="90"/>
+                                                        <rect key="frame" x="0.0" y="355" width="375" height="90"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHa-jf-VCD">
                                                                 <rect key="frame" x="42" y="22" width="228" height="21"/>
@@ -1912,7 +1963,7 @@ Try it for yourself - record your own story.</string>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bg4-AZ-imB" userLabel="PasswordView">
-                                                        <rect key="frame" x="0.0" y="378" width="375" height="67"/>
+                                                        <rect key="frame" x="0.0" y="445" width="375" height="67"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahV-Hr-O3J">
                                                                 <rect key="frame" x="42" y="12" width="228" height="21"/>
@@ -1963,7 +2014,7 @@ Try it for yourself - record your own story.</string>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ba3-7g-DZE" userLabel="ConfirmPasswordView">
-                                                        <rect key="frame" x="0.0" y="445" width="375" height="67"/>
+                                                        <rect key="frame" x="0.0" y="512" width="375" height="67"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONFIRM PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2SP-4E-C1O">
                                                                 <rect key="frame" x="42" y="12" width="228" height="21"/>
@@ -2014,7 +2065,7 @@ Try it for yourself - record your own story.</string>
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41b-7E-VGO" userLabel="Remember me button">
-                                                        <rect key="frame" x="42" y="519" width="105" height="30"/>
+                                                        <rect key="frame" x="42" y="586" width="105" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="105" id="2Xw-RY-CWU"/>
                                                             <constraint firstAttribute="height" constant="30" id="4cs-EK-80G"/>
@@ -2030,7 +2081,7 @@ Try it for yourself - record your own story.</string>
                                                         </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y9n-ek-PxU" userLabel="BottomView">
-                                                        <rect key="frame" x="0.0" y="542" width="375" height="198"/>
+                                                        <rect key="frame" x="0.0" y="609" width="375" height="198"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V79-tP-npn">
                                                                 <rect key="frame" x="61" y="38" width="253" height="39"/>
@@ -2108,7 +2159,7 @@ Try it for yourself - record your own story.</string>
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ry6-VA-hKh">
-                                                        <rect key="frame" x="147" y="519" width="127" height="30"/>
+                                                        <rect key="frame" x="147" y="586" width="127" height="30"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="13"/>
                                                         <state key="normal" title=" Terms and conditions">
                                                             <color key="titleColor" red="0.91372549020000005" green="0.39607843139999999" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
@@ -2121,6 +2172,7 @@ Try it for yourself - record your own story.</string>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstItem="ry6-VA-hKh" firstAttribute="height" secondItem="41b-7E-VGO" secondAttribute="height" id="7h1-lV-rrN"/>
+                                                    <constraint firstItem="2o6-e9-zFk" firstAttribute="leading" secondItem="LXD-SX-yFf" secondAttribute="leading" id="8b8-G3-vDq"/>
                                                     <constraint firstItem="Ejk-K4-LNK" firstAttribute="top" secondItem="ktA-RM-39O" secondAttribute="bottom" id="9EC-Td-7gF"/>
                                                     <constraint firstItem="y9n-ek-PxU" firstAttribute="leading" secondItem="LXD-SX-yFf" secondAttribute="leading" id="CPT-Pb-cd8"/>
                                                     <constraint firstAttribute="trailing" secondItem="wYt-xe-b6R" secondAttribute="trailing" id="Cby-ie-8nr"/>
@@ -2129,16 +2181,18 @@ Try it for yourself - record your own story.</string>
                                                     <constraint firstItem="d78-u6-djz" firstAttribute="leading" secondItem="LXD-SX-yFf" secondAttribute="leading" id="Exh-VL-r7d"/>
                                                     <constraint firstItem="wYt-xe-b6R" firstAttribute="leading" secondItem="LXD-SX-yFf" secondAttribute="leading" id="HDh-XO-rNh"/>
                                                     <constraint firstItem="Ba3-7g-DZE" firstAttribute="top" secondItem="Bg4-AZ-imB" secondAttribute="bottom" id="IgL-WO-uMA"/>
-                                                    <constraint firstItem="TDc-Wc-Ukc" firstAttribute="top" secondItem="d78-u6-djz" secondAttribute="bottom" id="JP3-a4-ztr"/>
+                                                    <constraint firstItem="2o6-e9-zFk" firstAttribute="top" secondItem="d78-u6-djz" secondAttribute="bottom" id="Jlz-Yb-VAz"/>
                                                     <constraint firstItem="41b-7E-VGO" firstAttribute="leading" secondItem="LXD-SX-yFf" secondAttribute="leading" constant="42" id="Mdl-mr-3Uh"/>
                                                     <constraint firstItem="y9n-ek-PxU" firstAttribute="top" secondItem="41b-7E-VGO" secondAttribute="bottom" constant="-7" id="NPv-sg-hdS"/>
                                                     <constraint firstItem="d78-u6-djz" firstAttribute="top" secondItem="LXD-SX-yFf" secondAttribute="top" id="Ovo-YP-gev"/>
                                                     <constraint firstAttribute="trailing" secondItem="Ejk-K4-LNK" secondAttribute="trailing" id="P0H-M2-QPz"/>
+                                                    <constraint firstItem="TDc-Wc-Ukc" firstAttribute="top" secondItem="2o6-e9-zFk" secondAttribute="bottom" id="PxZ-LZ-C5I"/>
                                                     <constraint firstAttribute="trailing" secondItem="Ba3-7g-DZE" secondAttribute="trailing" id="Qmh-VE-3Sp"/>
                                                     <constraint firstItem="ry6-VA-hKh" firstAttribute="leading" secondItem="41b-7E-VGO" secondAttribute="trailing" id="WDV-a1-5dH"/>
                                                     <constraint firstAttribute="trailing" secondItem="d78-u6-djz" secondAttribute="trailing" id="Wf8-s4-iEq"/>
                                                     <constraint firstItem="y9n-ek-PxU" firstAttribute="top" secondItem="Ba3-7g-DZE" secondAttribute="bottom" constant="30" id="WxW-Re-pjQ"/>
                                                     <constraint firstItem="ry6-VA-hKh" firstAttribute="centerY" secondItem="41b-7E-VGO" secondAttribute="centerY" id="ZTe-Am-jeg"/>
+                                                    <constraint firstAttribute="trailing" secondItem="2o6-e9-zFk" secondAttribute="trailing" id="ZtB-So-yZe"/>
                                                     <constraint firstItem="TDc-Wc-Ukc" firstAttribute="leading" secondItem="LXD-SX-yFf" secondAttribute="leading" id="a7p-YX-N3c"/>
                                                     <constraint firstAttribute="trailing" secondItem="Bg4-AZ-imB" secondAttribute="trailing" id="aRg-ha-cbF"/>
                                                     <constraint firstItem="Ejk-K4-LNK" firstAttribute="leading" secondItem="LXD-SX-yFf" secondAttribute="leading" id="atk-Vb-qhW"/>
@@ -2240,7 +2294,6 @@ Try it for yourself - record your own story.</string>
                         <outlet property="emailTextFeild" destination="j4A-Uj-2BY" id="Nyl-m7-kfF"/>
                         <outlet property="femaleGenderButton" destination="AOd-6V-2gs" id="ZNy-oz-Opr"/>
                         <outlet property="maleGenderButton" destination="8Ao-Ok-zaE" id="UKa-L2-Wwh"/>
-                        <outlet property="nameTextFeild" destination="CS9-gU-oIl" id="ZUO-fk-89k"/>
                         <outlet property="otherGenderButton" destination="TJU-6C-d1g" id="Wgi-cO-EeE"/>
                         <outlet property="passwordTextField" destination="jgo-X4-2KM" id="Y47-x9-fbD"/>
                         <outlet property="phoneFieldView" destination="ktA-RM-39O" id="xgs-o1-rmF"/>
@@ -2253,7 +2306,7 @@ Try it for yourself - record your own story.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEO-rS-Qil" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1070" y="1085"/>
+            <point key="canvasLocation" x="1069.6875" y="1084.8591549295775"/>
         </scene>
         <!--Forgot Password Second View Controller-->
         <scene sceneID="0Ud-7Y-182">

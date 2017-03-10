@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cleanRVC) name:kCleanRecordViewControllerNotification object:nil];
-    NSString *userName = [UserManager sharedManager].userModel.userName;
+    NSString *userName = [NSString stringWithFormat:@"%@ %@",[UserManager sharedManager].userModel.firstName, [UserManager sharedManager].userModel.lastName];
     _welcomeLabel.text = [NSString stringWithFormat:@"Welcome back \n%@, \nwhat do you want to record today?",userName];
     
     UIFont *boldFont = [UIFont fontWithName:@"Roboto-Bold" size:22.0f];
