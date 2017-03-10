@@ -49,7 +49,7 @@
 //            }
             
             NSMutableAttributedString *attString = [_descriptionTextView.attributedText mutableCopy];
-            UIFont *font1 = [UIFont fontWithName:@"Roboto-LightItalic" size:14.f];
+            UIFont *font1 = [UIFont fontWithName:@"Roboto-LightItalic" size:15.f];
             [attString addAttribute:NSFontAttributeName value:font1 range:NSMakeRange(0, self.descriptionTextView.text.length)];
             UIFont *font = [UIFont fontWithName:@"Roboto-Light" size:14.f];
             [attString addAttribute:NSFontAttributeName value:font range:[_descriptionTextView.text rangeOfString:@"Sometimes recording a diary is boring, sometimes it’s a chore. It’s an everyday thing, part of the routine. In the poem Born Yesterday, Phillip Larkin reflects on what it is to be ordinary. The poem ends;\n\n"]];
