@@ -62,15 +62,17 @@ static dispatch_once_t userOnceToken;
         if (numberOfWordsInName > 1) {
             firstName = [allWordsInName firstObject];
         }
-        NSString *nameOtherThanFirstName = [name stringByReplacingCharactersInRange:[name rangeOfString:firstName] withString:@""];
+        NSString *nameOtherThanFirstName = [[name stringByReplacingCharactersInRange:[name rangeOfString:firstName] withString:@""] trim];
         lastName = nameOtherThanFirstName;
         [UserDefaults setValue:firstName forKey:@"firstName"];
         [UserDefaults setValue:lastName forKey:@"lastName"];
+        [UserDefaults setValue:@"" forKey:@"name"];
         [UserDefaults synchronize];
         _userModel.firstName = firstName;
         _userModel.lastName = lastName;
-        [UserDefaults setValue:@"" forKey:@"name"];
     }
+    _userModel.firstName = [UserDefaults valueForKey:@"firstName"];
+    _userModel.lastName = [UserDefaults valueForKey:@"lastName"];
     _userModel.password = [UserDefaults valueForKey:@"password"];
     _userModel.dateOfBirth = [UserDefaults valueForKey:@"date_of_birth"];
     _userModel.phoneNumber = [UserDefaults valueForKey:@"phone_number"];
